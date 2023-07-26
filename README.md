@@ -16,24 +16,21 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
         end
     end
 end)  
-local blacklist = {
-1480395031 and "nhat8a10",
-892917079 and "baxuan1242",
-1426606839 and "hackcc16",
-3899214734 and "chemhan78121",
-3896699123 and "chemhan21323",
-1370768463 and "hackcc11"
+local listed = {
+1480395031, -- nhat8a10
+892917079, -- baxuan1242
+1426606839, -- hackcc16
+3899214734, -- chemhan78121
+3896699123, -- chemhan21323
+1370768463, -- hackcc11
 }
-
-
-_G.AutoCamp = false
-
-for _, v1 in pairs(blacklist) do
-if game.Players.LocalPlayer.UserId == v1 then
-_G.AutoCamp = true
-end
-end
-if _G.AutoCamp then
+_G.WhiteListed = false
+        for _, v1 in pairs(listed) do
+            if game.Players.LocalPlayer.UserId == v1 then
+_G.WhiteListed = true
+            end
+        end
+if _G.WhiteListed then
   if game.placeId == 8569358381 or game.placeId == 3237168 then
     local vu = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -5653,7 +5650,7 @@ end)
     end
     end)
     end
-if _G.AutoCamp == false then 
-game.Players.LocalPlayer:Kick("người đẹp thế mà sao chưa mua script nhỉ? / Facebook: https://www.facebook.com/IrenkissWantPeace/  Discord: AZ-BrAg#6921")
-end
+    end
+if _G.WhiteListed == false then 
+game.Players.LocalPlayer:Kick("KICKED  IREN HUB Notify: Go Buy Script")
 end
