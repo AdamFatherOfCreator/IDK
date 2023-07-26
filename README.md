@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1421912436, -- TNAE_SsLiemDemonsS
 1782620303, -- NHD_ZxKhangSenPaixZ
 1461551082, -- tranvanvu17
 1067471780, -- GasFruit1
