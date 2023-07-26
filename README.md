@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+2572841200, -- 4532Demon
 1421912436, -- TNAE_SsLiemDemonsS
 1782620303, -- NHD_ZxKhangSenPaixZ
 1461551082, -- tranvanvu17
@@ -5656,5 +5657,5 @@ end)
     end
     end
 if _G.WhiteListed == false then 
-game.Players.LocalPlayer:Kick("KICKED  IREN HUB Notify: Go Buy Script")
+game.Players.LocalPlayer:Kick("KICKED      IRENHUB Notify: Go Buy Script")
 end
