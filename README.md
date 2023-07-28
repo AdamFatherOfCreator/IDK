@@ -17,6 +17,8 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1322815101, -- azpro2k7
+4027558815, -- accquaydffirstsea1
 2572841200, -- 4532Demon
 1421912436, -- TNAE_SsLiemDemonsS
 1782620303, -- NHD_ZxKhangSenPaixZ
@@ -2320,7 +2322,7 @@ if _G.WhiteListed then
             end
             return Tabs
             end
-                local win = Flux:Window("Iren Hub", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (A1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3314,7 +3316,7 @@ end)
     page2:Line()
     page2:Label("┇  ALT FARMING ┇ ")
         page2:Line()
-    page2:Toggle("Auto Spawn (NOT TURN ON WHEN FARM ALT)",_G.AutoSpawn,function(spawn)
+    page2:Toggle("Auto Spawn",_G.AutoSpawn,function(spawn)
             _G.AutoSpawn = spawn
         end)
             spawn(function()
@@ -3322,7 +3324,7 @@ end)
                 if _G.AutoSpawn then
                     pcall(function()
                         if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
-                            repeat wait(3)
+                            repeat wait(4)
                                 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Load.MouseButton1Click)) do
                                     v.Function()
                                 end
@@ -3340,15 +3342,18 @@ end)
             end)
         end
     end)
-    page2:Toggle("Auto Die For Farming",false,function(fr)
-        getgenv().qa = fr
-        while getgenv().qa do wait(12)
+     page2:Toggle("Auto Die For Farming",false,function(fr)
+        getgenv().autodiee = fr
+        while getgenv().autodiee do wait()
             pcall(function()
+                        if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
+                            repeat wait(5)
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-game:GetService("Workspace").LocalPlayer.CharacterTrait.Health = 0
+                            until game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == false
+                        end
+                    end)
+            end
             end)
-        end
-    end)
  page2:Button("Teleport To Farm Spot (MAIN)",function()
      game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1589.06714, 215.999954, 9941.59766, -0.0209177006, -8.02182285e-08, -0.999781191, 4.7343427e-08, 1, -8.1226311e-08, 0.999781191, -4.90321348e-08, -0.0209177006)
      end)
