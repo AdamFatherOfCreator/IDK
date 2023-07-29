@@ -37,8 +37,10 @@ local listed = {
 146022306, -- hainha0123456
 1810614004, -- Shadow_MainNoob
 1957434850, -- clonepk5
+4027558815, -- accquaydffirstsea1
 1423316156, -- ACE_xXAZPROGOD123Xx
 4048427595, --accquaydffirstsea21
+1322815101, -- azpro2k7
 2221229319, -- duongthai366
 1175626557, -- zxcandyxzz
 1821277569, -- Jack_Sama123
@@ -55,22 +57,6 @@ local listed = {
 4802073978, -- tuantuantuantuang
 1832777631, --EvilNumBer_1
 4254731743 --AHD_SIEUVIP
-1574447607, -- cacchutuoitom2000
-1069596493, -- ChiThanh_12
-1221321256, -- bibimbin1
-1322815101, -- azpro2k7
-4027558815, -- accquaydffirstsea1
-2572841200, -- 4532Demon
-1421912436, -- TNAE_SsLiemDemonsS
-1782620303, -- NHD_ZxKhangSenPaixZ
-1461551082, -- tranvanvu17
-1067471780, -- GasFruit1
-1480395031, -- nhat8a10
-892917079, -- baxuan1242
-1426606839, -- hackcc16
-3899214734, -- chemhan78121
-3896699123, -- chemhan21323
-1370768463 -- hackcc11
 }
 _G.WhiteListed = false
         for _, v1 in pairs(listed) do
