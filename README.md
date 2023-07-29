@@ -57,6 +57,20 @@ local listed = {
 4802073978, -- tuantuantuantuang
 1832777631, --EvilNumBer_1
 4254731743 --AHD_SIEUVIP
+1574447607, -- cacchutuoitom2000
+1069596493, -- ChiThanh_12
+1221321256, -- bibimbin1
+2572841200, -- 4532Demon
+1421912436, -- TNAE_SsLiemDemonsS
+1782620303, -- NHD_ZxKhangSenPaixZ
+1461551082, -- tranvanvu17
+1067471780, -- GasFruit1
+1480395031, -- nhat8a10
+892917079, -- baxuan1242
+1426606839, -- hackcc16
+3899214734, -- chemhan78121
+3896699123, -- chemhan21323
+1370768463 -- hackcc11
 }
 _G.WhiteListed = false
         for _, v1 in pairs(listed) do
