@@ -17,6 +17,47 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+2529508762, -- ChauBaolam29
+1347848913, -- cucsilau345
+1544046636, -- nghiahahi
+1855776836, -- hungfc573
+1165679906, -- duy08duy08
+4850255262, -- 160kdaycnb109
+3381622523, -- 160kdaycnb1
+1254144943, -- khanhkaido9999
+1312230152, -- gigadian123
+4723792084, -- clmm98b
+1480130154, -- tokuda_jabanvn
+1129631079, -- apexbes2
+4736342091, -- nzxz5
+4736344396, -- nzxz6
+4736346104, -- nzxz7
+1490665232, -- DFGHTRU10
+3246732830, -- Hainclone2
+146022306, -- hainha0123456
+1810614004, -- Shadow_MainNoob
+1957434850, -- clonepk5
+1423316156, -- ACE_xXAZPROGOD123Xx
+4048427595, --accquaydffirstsea21
+2221229319, -- duongthai366
+1175626557, -- zxcandyxzz
+1821277569, -- Jack_Sama123
+1928941615, -- King_RareBox
+226801418, -- hieubom123
+660629515, -- LHPGamingVN
+170895715, -- ductx2004
+1075665647, -- khang20297
+1813673746, -- MagnusDiggory1
+175021965, -- huyduy909090
+3146985482, -- bl4ck1105
+4494066040, -- SimulatorDotio
+936844900, -- aztrear2
+4802073978, -- tuantuantuantuang
+1832777631, --EvilNumBer_1
+4254731743 --AHD_SIEUVIP
+1574447607, -- cacchutuoitom2000
+1069596493, -- ChiThanh_12
+1221321256, -- bibimbin1
 1322815101, -- azpro2k7
 4027558815, -- accquaydffirstsea1
 2572841200, -- 4532Demon
@@ -29,7 +70,7 @@ local listed = {
 1426606839, -- hackcc16
 3899214734, -- chemhan78121
 3896699123, -- chemhan21323
-1370768463, -- hackcc11
+1370768463 -- hackcc11
 }
 _G.WhiteListed = false
         for _, v1 in pairs(listed) do
