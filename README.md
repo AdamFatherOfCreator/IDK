@@ -2422,26 +2422,37 @@ if _G.WhiteListed then
         getgenv().antistun = bool
         while getgenv().antistun do wait()
             pcall(function()
-                local hoangashdeptrai = game.Players.LocalPlayer.Character
+local plr = game.Players.LocalPlayer.Character
     repeat
-    hoangashdeptrai["DF_Disabled"].Value = false
-    hoangashdeptrai.HeartStolen.Value = true
-    hoangashdeptrai.Returned.Value = false
-    hoangashdeptrai.Hobbied.Value = false
-    hoangashdeptrai.HMS.Value = false
-    hoangashdeptrai.ChillyPunched.Value = false
-    hoangashdeptrai.CandyTouched.Value = false
-    hoangashdeptrai.Negative.Value = false
-    hoangashdeptrai.OpeSevered.Value = false
-    hoangashdeptrai.SnowTouched.Value = false
-    hoangashdeptrai.RumbleStun.Value = false
-    hoangashdeptrai.GravityCrushed.Value = false
+plr.BurnMagmaOverTime.Value = true
+plr.BurnOverTime.Value = true
+plr.CandyTouched.Value = true
+plr.Cheshire.Value = true
+plr.ChillyPunched.Value = true
+plr["DF_Disabled"].Value = false
+plr.GasPoison.Value = true
+plr.GasAirless.Value = true
+plr.GravityCrushed.Value = true
+plr.HeartStolen.Value = true
+plr.Hobbied.Value = true
+plr.HotBody.Value = true
+plr.HypnosisOnCooldown.Value = true
+plr.LoveStunned.Value = true
+plr.Mored.Value = true
+plr.Negative.Value = true
+plr.OpeSevered.Value = true
+plr.Returned.Value = true
+plr.RumbleStun.Value = true
+plr.SanguineVampiris.Value = true
+plr.SnowTouched.Value = true
+plr.Stringing.Value = true
+plr.VenomDoT.Value = true
+wait(0.06)
+    until plr.Humanoid.Health == 0
 
-    wait(0.06)
-    until hoangashdeptrai.Humanoid.Health == 0
-    end)
-    end
-    end)
+end)
+end
+end)
     page9:Line()
         page9:Label("┇ WEAPON SPAM (YORU FOR DEF FARMING) ┇")
     page9:Line()
