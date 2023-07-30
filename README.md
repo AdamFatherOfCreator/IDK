@@ -3083,37 +3083,43 @@ page9:Line()
 page9:Label("┇ OTHER FRUIT FARM ┇")
 page9:Line()
 page9:Toggle("Teleport To Mob (Include Krizma Cave)",false,function(req)
-        getgenv().bringmob01 = req
-        while getgenv().bringmob01 do wait()
-    pcall(function()
- for _,v in pairs(game.Workspace.Enemies:GetChildren()) do
+getgenv().c = req
+while getgenv().c do wait()
+pcall(function()
+ for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
             if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") or string.find(v.Name, "Bruno") or string.find(v.Name, "Bucky") 
               or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
              or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Gunner") or string.find(v.Name, "Buster") or string.find(v.Name, "Boar")
-              and v:FindFirstChild("HumanoidRootPart") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 15, 0)
-wait(0.5)
+              and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
+repeat wait()
+pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(4,0,0)
+end)
+until v.Humanoid.Health <= 0 or not getgenv().c
 end
 end
-    end)
-    end
-    end)
+end)
+end
+end)
     page9:Toggle("Teleport To Mob (Except Krizma Cave)",false,function(mob)
-        getgenv().bringmob04 = mob
-        while getgenv().bringmob04 do wait()
-    pcall(function()
- for _,v in pairs(game.Workspace.Enemies:GetChildren()) do
+getgenv().a = mob
+while getgenv().a do wait()
+pcall(function()
+ for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
             if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") 
               or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
              or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Boar")
-              and v:FindFirstChild("HumanoidRootPart") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0, 15, 0)
-wait(0.5)
+              and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
+repeat wait()
+pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(4,0,0)
+end)
+until v.Humanoid.Health <= 0 or not getgenv().a
 end
 end
-    end)
-    end
-    end)
+end)
+end
+end)
 page9:Toggle("Float with platform (turn on when farm)", false, function(plat)
 getgenv().flat11 = plat
         while getgenv().flat11 do wait()
