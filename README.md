@@ -29,9 +29,6 @@ local listed = {
 4723792084, -- clmm98b
 1480130154, -- tokuda_jabanvn
 1129631079, -- apexbes2
-4736342091, -- nzxz5
-4736344396, -- nzxz6
-4736346104, -- nzxz7
 1490665232, -- DFGHTRU10
 3246732830, -- Hainclone2
 146022306, -- hainha0123456
