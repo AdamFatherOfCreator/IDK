@@ -3153,7 +3153,7 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait(0.5)
 pcall(function()
-v.Humanoid.Health = 100
+v.Humanoid.Health = 0
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(1,0,0)
 wait()
 v.Humanoid.Health = 0
@@ -3176,7 +3176,7 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait(0.5)
 pcall(function()
-v.Humanoid.Health = 100
+v.Humanoid.Health = 0
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(1,0,0)
 wait()
 v.Humanoid.Health = 0
