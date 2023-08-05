@@ -3151,12 +3151,13 @@ pcall(function()
                or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
               or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Gunner") or string.find(v.Name, "Buster") or string.find(v.Name, "Boar")
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
-repeat wait(0.5)
+repeat wait(0.4)
 pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,5,0)
+wait(0.1)
 v.Humanoid.Health = 0
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(1,0,0)
-wait()
-v.Humanoid.Health = 0
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
 until v.Humanoid.Health <= 0 or not getgenv().c
 end
@@ -3176,10 +3177,11 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait(0.5)
 pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,5,0)
+wait(0.1)
 v.Humanoid.Health = 0
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(1,0,0)
-wait()
-v.Humanoid.Health = 0
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end)
 until v.Humanoid.Health <= 0 or not getgenv().a
 end
