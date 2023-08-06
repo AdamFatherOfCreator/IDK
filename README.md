@@ -58,7 +58,7 @@ local listed = {
 1832777631, --EvilNumBer_1
 4254731743, --AHD_SIEUVIP
 1574447607, -- cacchutuoitom2000
-4247267795, -- baomattroi6
+2045590029, -- Lucky_Oz4
 1221321256, -- bibimbin1
 2572841200, -- 4532Demon
 1421912436, -- TNAE_SsLiemDemonsS
