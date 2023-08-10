@@ -3088,6 +3088,10 @@ end)
 page9:Line()
 page9:Label("┇ OTHER FRUIT FARM ┇")
 page9:Line()
+farmdis = 5
+page9:Slider("Farm Distance", 0,20, 5,function(dis)
+farmdis = dis
+end)
 page9:Toggle("Teleport To Mob (Include Krizma Cave)",false,function(req)
 getgenv().c = req
 while getgenv().c do wait()
@@ -3097,9 +3101,9 @@ pcall(function()
               or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
              or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Gunner") or string.find(v.Name, "Buster") or string.find(v.Name, "Boar")
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
-repeat wait(0.2)
+repeat wait()
 pcall(function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,20,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
 end)
 until v.Humanoid.Health <= 0 or not getgenv().c
 end
@@ -3116,9 +3120,9 @@ pcall(function()
               or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
              or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Boar")
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
-repeat wait(0.2)
+repeat wait()
 pcall(function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,20,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
 end)
 until v.Humanoid.Health <= 0 or not getgenv().a
 end
@@ -3126,25 +3130,7 @@ end
 end)
 end
 end)
-page9:Toggle("Float with platform (turn on when farm)", false, function(plat)
-getgenv().flat11 = plat
-        while getgenv().flat11 do wait()
-    pcall(function()
- local char = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,-3.125,0)
-	    local b101 = Instance.new("Part")
-	    b101.Shape = "Block"
-	    b101.Material = "Glass"
-	    b101.BrickColor = BrickColor.new("Hot Pink")
-        b101.Anchored = true
-	    b101.Parent = game.Workspace
-	    b101.CFrame = char
-        b101.Size = Vector3.new(10, 0.65, 10)
-wait()
-        b101:Destroy()
-
-end)
-   end
-    end)
+page9:Line()
 page9:Toggle("FARM KILL AURA (Include Krizma Cave)",false,function(req)
 getgenv().c = req
 while getgenv().c do wait()
@@ -4498,7 +4484,8 @@ end)
     
        end
     )
-    page2:Slider("Haki Target %",  1, 100,1,function(gmm)
+    hakitarget = 10
+    page2:Slider("Haki Target %",  1, 100,10,function(gmm)
     hakitarget = gmm
     end)
     page2:Button("Auto Farm Haki", function()
