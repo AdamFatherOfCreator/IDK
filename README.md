@@ -3081,7 +3081,7 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-wait(0.01)
+wait(0.1)
 end)
 end
 end)
