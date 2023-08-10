@@ -3103,7 +3103,7 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
 repeat wait()
 pcall(function()
-if getgenv().c == true then 
+if getgenv().c == true and v.Humanoid.Health > 0 then 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
 end
 end)
@@ -3124,7 +3124,7 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
 repeat wait()
 pcall(function()
-if getgenv().a == true then
+if getgenv().a == true and v.Humanoid.Health > 0 then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
 end
 end)
