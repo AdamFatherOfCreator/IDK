@@ -3595,21 +3595,19 @@ end)
     end)
     page2:Toggle("Auto Find Compass",false,function(bool)
             getgenv().autofindsam = bool
-            while getgenv().autofindsam do wait()
+            while getgenv().autofindsam do wait(0.3)
                 pcall(function()
-                        if game.Players.LocalPlayer.Backpack:FindFirstChild("Compass") and not game.Players.LocalPlayer.Character:FindFirstChild("Compass") then
-                            game.Players.LocalPlayer.Backpack:FindFirstChild("Compass").Parent = game.Players.LocalPlayer.Character
-                        elseif game.Players.LocalPlayer.Character:FindFirstChild("Compass") then
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character:FindFirstChild("Compass").Poser.Value)
-                        end
-        local args = {
-            [1] = getgenv().autofindsam
-        }
-        local vu = game:GetService("VirtualUser")
-    vu:ClickButton1(Vector2.new(500,0))
-    local humroot = game.Players.LocalPlayer.Character.HumanoidRootPart
-    humroot.CFrame = CFrame.new(v.HitBox.Position)
-    
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Compass") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["Compass"])
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v.Name == "Compass" then              
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Poser.Value)
+end
+if game.Players.LocalPlayer.Character:FindFirstChild("Compass") then
+game.Players.LocalPlayer.Character.Compass:Activate()
+end
+    end
        end)
     end
     end)
