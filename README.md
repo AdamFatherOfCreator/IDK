@@ -3100,10 +3100,12 @@ pcall(function()
             if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") or string.find(v.Name, "Bruno") or string.find(v.Name, "Bucky") 
               or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
              or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Gunner") or string.find(v.Name, "Buster") or string.find(v.Name, "Boar")
-              and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
+              and v:FindFirstChild("HumanoidRootPart") then
 repeat wait()
 pcall(function()
+if getgenv().c == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
+end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().c
 end
@@ -3122,7 +3124,9 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait()
 pcall(function()
+if getgenv().a == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
+end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().a
 end
