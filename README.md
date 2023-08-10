@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4087605807, -- tinhkhenh1
 674002227, -- huylop3c32
 1814938572, -- TM_HuyDepZai
 1309541634, -- thaideptrai32g
