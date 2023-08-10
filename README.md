@@ -4551,7 +4551,6 @@ if game.Workspace.UserData["User_"..plrid].HakiBar.Value > sss then
     workspace.UserData["User_"..Final].III:FireServer(unpack(args))
 repeat task.wait()
 until game.Workspace.UserData["User_"..plrid].HakiBar.Value >= slv
-wait()
 _G.concu = true
     end
     end
