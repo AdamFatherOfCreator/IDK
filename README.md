@@ -3071,6 +3071,7 @@ getgenv().lightttt = tpmodelight
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Light)
 local v = x.VTCrv
 game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(v,"LightPower2", "StartCharging",CFrame.new(Vector3.new(-1037.58544921875, 215.7229461669922, -5000.449951171875), Vector3.new(-0.7139230966567993, -0.5779988169670105, 0.39526084065437317)),workspace.IslandCaver.Stones.Stone, 100)
+wait()
 local args = {
     [1] = v,
     [2] = "LightPower2",
