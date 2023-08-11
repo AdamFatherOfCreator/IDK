@@ -2367,7 +2367,7 @@ if _G.WhiteListed then
             end
             return Tabs
             end
-                local win = Flux:Window("Iren Hub (A1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (B1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
