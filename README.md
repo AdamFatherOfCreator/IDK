@@ -2367,7 +2367,7 @@ if _G.WhiteListed then
             end
             return Tabs
             end
-                local win = Flux:Window("Iren Hub (B1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (B2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4546,17 +4546,13 @@ repeat task.wait()
 until game.Workspace.UserData["User_"..plrid].HakiBar.Value >= slv
 _G.concu = true
 elseif getgenv().concuvm == false then
-repeat
+_G.concu = false
         local args = {
         [1] = "Off",
         [2] = 1
     }
     
     workspace.UserData["User_"..Final].III:FireServer(unpack(args))
-
-
-    wait(0.1)
-until game.Workspace.UserData["User_"..plrid].HakiBar.Value >= slv
 end
 end
     end)
