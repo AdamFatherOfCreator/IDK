@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4639567199, -- nguyenquanghuytu
 4641381230, -- anhnghiapro16
 2226394702, -- HadesTrum
 4732817476, -- ShipTrox
