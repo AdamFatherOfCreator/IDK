@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4055494125, -- accquaydffirstsea30
 4945123695, -- 1_xSxBuildTheSun
 4639567199, -- nguyenquanghuytu
 4641381230, -- anhnghiapro16
@@ -2900,11 +2901,13 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait(0.4)
 pcall(function()
+if getgenv().c == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(5,0,0)
 wait(0.1)
 v.Humanoid.Health = 0
 wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().c
 end
@@ -2924,11 +2927,13 @@ pcall(function()
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
 repeat wait(0.5)
 pcall(function()
+if getgenv().a == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(5,0,0)
 wait(0.1)
 v.Humanoid.Health = 0
 wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().a
 end
