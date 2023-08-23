@@ -4799,6 +4799,13 @@ _G.allspin = true
 else
 _G.allspin = false
 end
+if SWORDSTAR == false and DEFSTAR == false and MELEESTAR == false and SNIPERSTAR == false then
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Active = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Text = "CHOOSE TARGET BEFORE SPIN"
+end
+
 if _G.allspin == true and getgenv().AutoRoll == true then
 local args = {
     [1] = "DFT1",
@@ -4957,7 +4964,258 @@ local args = {
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
 end
-wait(9)
+wait(8)
+end)
+end
+end)
+
+page4:Toggle("AUTO SPIN AFFINITIES FRUIT 2", false, function(spin1)
+getgenv().AutoRoll = spin1
+while getgenv().AutoRoll do wait()
+pcall(function()
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+if DEFSTAR == true and SNIPERSTAR == false and MELEESTAR == false and SWORDSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty then
+_G.defspin = true
+
+else
+_G.defspin = false
+end
+if MELEESTAR == true and DEFSTAR == false and SWORDSTAR == false and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty then
+_G.meleespin = true
+
+else
+_G.meleespin = false
+end
+if SNIPERSTAR == true and DEFSTAR == false and MELEESTAR == false and SWORDSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty then
+_G.sniperspin = true
+
+else
+_G.sniperspin = false
+end
+if SWORDSTAR == true and DEFSTAR == false and MELEESTAR == false and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty then
+_G.swordspin = true
+
+else
+_G.swordspin = false
+end
+if SWORDSTAR == false and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty then
+_G.defmeleespin = true
+
+else
+_G.defmeleespin = false
+end
+if SWORDSTAR == false and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty then
+_G.defsnipspin = true
+else
+_G.defsnipspin = false
+
+end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty then
+_G.defswordspin = true
+else
+_G.defswordspin = false
+end
+if SWORDSTAR == false and DEFSTAR == false and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty then
+_G.meleesnipspin = true
+else
+_G.meleesnipspin = false
+end
+if SWORDSTAR == true and DEFSTAR == false and MELEESTAR == true and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty then
+_G.meleeswordspin = true
+else
+_G.meleeswordspin = false
+end
+if SWORDSTAR == true and DEFSTAR == false and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty then
+_G.swordsnipspin = true
+else
+_G.swordsnipspin = false
+end
+if SWORDSTAR == false and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty then
+_G.defmeleesnipspin = true
+else
+_G.defmeleesnipspin = false
+end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == false and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty then
+_G.defmeleeswordspin = true
+else
+_G.defmeleeswordspin = false
+end
+if SWORDSTAR == true and DEFSTAR == false and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty then
+_G.meleesnipswordspin = true
+else
+_G.meleesnipswordspin = false
+end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty then
+_G.allspin = true
+else
+_G.allspin = false
+end
+if SWORDSTAR == false and DEFSTAR == false and MELEESTAR == false and SNIPERSTAR == false then
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Active = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Text = "CHOOSE TARGET BEFORE SPIN"
+end
+if _G.allspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.meleesnipswordspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defmeleeswordspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.defmeleesnipspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.swordsnipspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.meleeswordspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.meleesnipspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defswordspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defsnipspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defmeleespin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.swordspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.sniperspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.meleespin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+end
+wait(8)
 end)
 end
 end)
