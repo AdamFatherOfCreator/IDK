@@ -4794,8 +4794,24 @@ _G.meleesnipswordspin = true
 else
 _G.meleesnipswordspin = false
 end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT1Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Defense.Value < affty then
+_G.allspin = true
+else
+_G.allspin = false
+end
+if _G.allspin == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT1",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
 
-if _G.meleesnipswordspin == true and getgenv().AutoRoll == true then
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.meleesnipswordspin == true and getgenv().AutoRoll == true then
 local args = {
     [1] = "DFT1",
     [2] = DEFAFF,
