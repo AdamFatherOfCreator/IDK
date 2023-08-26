@@ -702,7 +702,7 @@ if _G.WhiteListed then
                     CircleSmall.Parent = Circle
                     CircleSmall.Active = true
                     CircleSmall.AnchorPoint = Vector2.new(0.5, 0.5)
-                    CircleSmall.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                    CircleSmall.BackgroundColor3 = Color3.fromRGB(31, 41, 43)
                     CircleSmall.BackgroundTransparency = 1.000
                     CircleSmall.Position = UDim2.new(0.485673368, 0, 0.503000021, 0)
                     CircleSmall.Size = UDim2.new(0, 9, 0, 9)
@@ -1123,7 +1123,7 @@ if _G.WhiteListed then
                     DropItemHolder.Size = UDim2.new(0, 436, 0, 82)
                     DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
                     DropItemHolder.ScrollBarThickness = 5
-                    DropItemHolder.ScrollBarImageColor3 = Color3.fromRGB(31, 41, 43)
+                    DropItemHolder.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
         
                     DropLayout.Name = "DropLayout"
                     DropLayout.Parent = DropItemHolder
@@ -2371,7 +2371,7 @@ if _G.WhiteListed then
             end
             return Tabs
             end
-                local win = Flux:Window("Iren Hub (C1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (D1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3013,6 +3013,282 @@ end)
         page1:Textbox("Fake Fish", "", true, function(Value)
        game:GetService("Players").LocalPlayer.PlayerGui.Menu.Frame.C.Frame.A.Fish.FishAmount.Text = "" ..Value
     end)
+    page1:Line()
+    page1:Label(" ┇ FAKE STORAGE ┇ ")
+    page1:Line()
+    local tablefruit = {
+            "Phoenix",
+            "Quake",
+            "Dark",
+            "Vampire",
+            "Magma",
+            "Rumble",
+            "Flare",
+            "Light",
+            "Gas",
+            "Chilly",
+            "Plasma",
+            "Ope",
+            "Snow",
+            "Sand",
+            "Smoke",
+            "Hollow",
+            "Candy",
+            "Venom",
+            "Gravity",
+            "Gum",
+            "Love",
+            "Bomb",
+            "Smelt",
+            "Diamond",
+            "Barrier",
+            "String",
+            "Hobby",
+            "Order",
+            "Alice",
+            "Alice (Aura)",
+            "More",
+            "More (Aura)",
+            "Return",
+            "Return (Aura)",
+            "Revive",
+            "Revive (Aura)",
+            "Swamp",
+            "Swamp (Aura)",
+            "Slip",
+            "Chop",
+            "Clone",
+            "Hot",
+            "Clear",
+            "Spring",
+            "Swim",
+            "Spin",
+            "Luck",
+            "Float"
+            
+        }
+    page1:Dropdown("Select Fake Fruit", tablefruit, function(ffruit)
+getgenv().ffrui = ffruit
+if getgenv().ffrui == "Phoenix" then ffff = "Phoenix Fruit,1,2,3,0,1"
+elseif getgenv().ffrui == "Dark" then ffff = "Dark Fruit,0,1,2,1,1"
+elseif getgenv().ffrui == "Quake" then ffff = "Quake Fruit,0,0,0,0,1"
+elseif getgenv().ffrui == "Vampire" then ffff = "Vampire Fruit,0,0,2,2,1"
+elseif getgenv().ffrui == "Magma" then ffff = "Magma Fruit,0,1,2,2,1"
+elseif getgenv().ffrui == "Rumble" then ffff = "Rumble Fruit,1,0,0,2,1"
+elseif getgenv().ffrui == "Light" then ffff = "Light Fruit,0,0,0,2,1"
+elseif getgenv().ffrui == "Flare" then ffff = "Flare Fruit,0,0,3,2,1"
+elseif getgenv().ffrui == "Gas" then ffff = "Gas Fruit,0,0,1,1,1"
+elseif getgenv().ffrui == "Chilly" then ffff = "Chilly Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "Plasma" then ffff = "Plasma Fruit,1,1,1,0,1"
+elseif getgenv().ffrui == "Ope" then ffff = "Ope Fruit,0,0,0,0,1"
+elseif getgenv().ffrui == "Snow" then ffff = "Snow Fruit,1,0,2,0,1"
+elseif getgenv().ffrui == "Sand" then ffff = "Sand Fruit,0,0,0,0,1"
+elseif getgenv().ffrui == "Smoke" then ffff = "Smoke Fruit,0,1,0,3,1"
+elseif getgenv().ffrui == "Hollow" then ffff = "Hollow Fruit,2,3,0,0,1"
+elseif getgenv().ffrui == "Candy" then ffff = "Candy Fruit,2,2,1,0,1"
+elseif getgenv().ffrui == "Venom" then ffff = "Venom Fruit,1,2,1,0,1"
+elseif getgenv().ffrui == "Gravity" then ffff = "Gravity Fruit,1,1,1,0,1"
+elseif getgenv().ffrui == "Gum" then ffff = "Gum Fruit,1,3,2,1,1"
+elseif getgenv().ffrui == "Bomb" then ffff = "Bomb Fruit,1,0,4,1,1"
+elseif getgenv().ffrui == "Love" then ffff = "Love Fruit,0,0,2,1,1"
+elseif getgenv().ffrui == "Smelt" then ffff = "Smelt Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "Diamond" then ffff = "Diamond Fruit,0,0,0,0,1"
+elseif getgenv().ffrui == "Barrier" then ffff = "Barrier Fruit,1,0,1,0,1"
+elseif getgenv().ffrui == "String" then ffff = "String Fruit,1,1,1,1,1"
+elseif getgenv().ffrui == "Hobby" then ffff = "Hobby Fruit,0,1,1,1,1"
+elseif getgenv().ffrui == "Order" then ffff = "Order Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "Alice" then ffff = "Alice Fruit,1,0,0,0,0"
+elseif getgenv().ffrui == "Alice (Aura)" then ffff = "Alice Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "More" then ffff = "More Fruit,1,1,2,0,0"
+elseif getgenv().ffrui == "More (Aura)" then ffff = "More Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "Return" then ffff = "Return Fruit,1,1,2,0,0"
+elseif getgenv().ffrui == "Return (Aura)" then ffff = "Return Fruit,1,0,1,0,1"
+elseif getgenv().ffrui == "Revive" then ffff = "Revive Fruit,1,0,1,0"
+elseif getgenv().ffrui == "Revive (Aura)" then ffff = "Revive Fruit,1,0,1,0,1"
+elseif getgenv().ffrui == "Swamp" then ffff = "Swamp Fruit,1,0,0,0"
+elseif getgenv().ffrui == "Swamp (Aura)" then ffff = "Swamp Fruit,1,0,1,0,1"
+elseif getgenv().ffrui == "Slip" then ffff = "Slip Fruit,3,0,0,0,1"
+elseif getgenv().ffrui == "Chop" then ffff = "Chop Fruit,1,2,2,2,1"
+elseif getgenv().ffrui == "Clone" then ffff = "Clone Fruit,0,0,1,2,1"
+elseif getgenv().ffrui == "Hot" then ffff = "Hot Fruit,0,0,1,0,1"
+elseif getgenv().ffrui == "Clear" then ffff = "Clear Fruit,1,0,1,0,1"
+elseif getgenv().ffrui == "Spring" then ffff = "Spring Fruit,1,0,0,0,1"
+elseif getgenv().ffrui == "Swim" then ffff = "Swim Fruit,0,0,0,0,1"
+elseif getgenv().ffrui == "Spin" then ffff = "Spin Fruit,0,2,1,2,1"
+elseif getgenv().ffrui == "Luck" then ffff = "Luck Fruit,0,2,1,2,1"
+elseif getgenv().ffrui == "Float" then ffff = "Float Fruit,0,2,1,2,1"
+end
+end)
+    page1:Toggle("Fake Fruit Storage 1", false, function(trett)
+    getgenv().fmag = trett
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local x = workspace.UserData["User_"..plrid].Data.StoredDF1.Value 
+while getgenv().fmag do wait()
+if getgenv().fmag == true then
+workspace.UserData["User_"..plrid].Data.StoredDF1.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF1.Value = ""..x
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 2", false, function(trettt)
+    getgenv().fchilly = trettt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local cc = workspace.UserData["User_"..plrid].Data.StoredDF2.Value 
+while getgenv().fchilly do wait()
+if getgenv().fchilly == true then
+workspace.UserData["User_"..plrid].Data.StoredDF2.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF2.Value = ""..cc
+end
+end
+end)
+
+    page1:Toggle("Fake Fruit Storage 3", false, function(tretttt)
+    getgenv().fflare = tretttt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local ccc = workspace.UserData["User_"..plrid].Data.StoredDF3.Value 
+while getgenv().fflare do wait()
+if getgenv().fflare == true then
+workspace.UserData["User_"..plrid].Data.StoredDF3.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF3.Value = ""..ccc
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 4", false, function(trettttt)
+    getgenv().fflaree = trettttt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local cccc = workspace.UserData["User_"..plrid].Data.StoredDF4.Value 
+while getgenv().fflaree do wait()
+if getgenv().fflaree == true then
+workspace.UserData["User_"..plrid].Data.StoredDF4.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF4.Value = ""..cccc
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 5", false, function(trettttttt)
+    getgenv().fflareeee = trettttttt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local cccccc = workspace.UserData["User_"..plrid].Data.StoredDF5.Value 
+while getgenv().fflareeee do wait()
+if getgenv().fflareeee == true then
+workspace.UserData["User_"..plrid].Data.StoredDF5.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF5.Value = ""..cccccc
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 6", false, function(tretttttt)
+    getgenv().fflareee = tretttttt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local ccccc = workspace.UserData["User_"..plrid].Data.StoredDF6.Value 
+while getgenv().fflareee do wait()
+if getgenv().fflareee == true then
+workspace.UserData["User_"..plrid].Data.StoredDF6.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF6.Value = ""..ccccc
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 7", false, function(tretttttttt)
+    getgenv().fflareeeee = tretttttttt
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local ccccccc = workspace.UserData["User_"..plrid].Data.StoredDF7.Value 
+while getgenv().fflareeeee do wait()
+if getgenv().fflareeeee == true then
+workspace.UserData["User_"..plrid].Data.StoredDF7.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF7.Value = ""..ccccccc
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 8", false, function(trec)
+    getgenv().ffrrr = trec
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvv = workspace.UserData["User_"..plrid].Data.StoredDF8.Value 
+while getgenv().ffrrr do wait()
+if getgenv().ffrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF8.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF8.Value = ""..vvv
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 8", false, function(trec)
+    getgenv().ffrrr = trec
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvv = workspace.UserData["User_"..plrid].Data.StoredDF8.Value 
+while getgenv().ffrrr do wait()
+if getgenv().ffrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF8.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF8.Value = ""..vvv
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 9", false, function(trecc)
+    getgenv().ffrrrr = trecc
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvvv = workspace.UserData["User_"..plrid].Data.StoredDF9.Value 
+while getgenv().ffrrrr do wait()
+if getgenv().ffrrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF9.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF9.Value = ""..vvvv
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 10", false, function(treccc)
+    getgenv().ffrrrrr = treccc
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvvvv = workspace.UserData["User_"..plrid].Data.StoredDF10.Value 
+while getgenv().ffrrrrr do wait()
+if getgenv().ffrrrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF10.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF10.Value = ""..vvvvv
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 11", false, function(trecccc)
+    getgenv().ffrrrrrr = trecccc
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvvvvv = workspace.UserData["User_"..plrid].Data.StoredDF11.Value 
+while getgenv().ffrrrrrr do wait()
+if getgenv().ffrrrrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF11.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF11.Value = ""..vvvvvv
+end
+end
+end)
+    page1:Toggle("Fake Fruit Storage 12", false, function(treccccc)
+    getgenv().ffrrrrrrr = treccccc
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+local vvvvvvv = workspace.UserData["User_"..plrid].Data.StoredDF12.Value 
+while getgenv().ffrrrrrrr do wait()
+if getgenv().ffrrrrrrr == true then
+workspace.UserData["User_"..plrid].Data.StoredDF12.Value = ffff
+else
+workspace.UserData["User_"..plrid].Data.StoredDF12.Value = ""..vvvvvvv
+end
+end
+end)
     page4:Line()
              page4:Label("┇ DRINK BUYING ┇")
                  page4:Line()
