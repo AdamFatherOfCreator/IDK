@@ -2983,6 +2983,18 @@ game.Workspace.UserData["User_"..plrid].Data.BoundUnlock21.Value = true
 game.Workspace.UserData["User_"..plrid].Data.BoundUnlock22.Value = true
 game.Workspace.UserData["User_"..plrid].Data.BoundUnlock23.Value = true
 game.Workspace.UserData["User_"..plrid].Data.BoundUnlock24.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock25.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock26.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock27.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock28.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock29.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock30.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock31.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock32.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock33.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock34.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock35.Value = true
+game.Workspace.UserData["User_"..plrid].Data.BoundUnlock36.Value = true
 end)
 
         
