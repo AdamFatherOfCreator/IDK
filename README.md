@@ -1,5 +1,24 @@
 local Pedo = {
-    1135910299,520944,43247021,2350183594,1338963426,1276541545,587649463,245586741,679804290,174941504,174941504}
+    1135910299, -- Havelic
+    520944, -- Oblivic
+    43247021, -- BowTiedPony
+    2350183594, -- icydragonwingsis
+    1338963426, -- happypandamagic2
+    1276541545, -- VanitasThePlague
+    587649463, -- happypandamagic
+    245586741, -- Tiptop98
+    174941504, -- FoxKingFab
+    136099207,-- CudlessTheCat
+    94825741, -- NATSUDRAGN331
+    358051152, -- VortexFragmented
+    529455640, -- vlonedd
+    281482099, -- Quixotize
+    355207559, -- Elianmc1s
+    5084487, -- Americanflag
+    928623624, -- TrashPanda2361
+    30049170, -- Farquanetta
+    474452017 -- Bige0n
+    }
 
 for _, v in pairs(game:GetService("Players"):GetPlayers()) do
     for _, v1 in pairs(Pedo) do
@@ -12,7 +31,7 @@ end
 game:GetService("Players").PlayerAdded:Connect(function(r)
     for _, v in pairs(Pedo) do
         if r.UserId == v then
-            game:GetService("Players").LocalPlayer:Kick("Admin has joined the server")
+            game:GetService("Players").LocalPlayer:Kick("Admin or Staff has joined the server")
         end
     end
 end)  
@@ -2474,7 +2493,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
