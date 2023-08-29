@@ -2493,11 +2493,11 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E3)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
-        local page9 = win:Tab("FRUIT/DEF FARM", "http://www.roblox.com/asset/?id=9391995844")
+        local page9 = win:Tab("KILL/DEF FARM", "http://www.roblox.com/asset/?id=9391995844")
         local page4 = win:Tab("SHOP", "http://www.roblox.com/asset/?id=9391995844")
         local page5 = win:Tab("PLAYER", "http://www.roblox.com/asset/?id=9391995844")
         local page7 = win:Tab("MOB BRING", "http://www.roblox.com/asset/?id=9391995844")
