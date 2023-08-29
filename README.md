@@ -17,6 +17,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4740726618, -- chemhan764239
 4055494125, -- accquaydffirstsea30
 4945123695, -- 1_xSxBuildTheSun
 4639567199, -- nguyenquanghuytu
