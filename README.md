@@ -2498,7 +2498,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E6)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E7)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3259,6 +3259,56 @@ game:GetService("Players").LocalPlayer.Character.Powers.Sand.RemoteEvent:FireSer
 end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().e
+end
+end
+end)
+end
+end)
+page9:Line()
+page9:Label("┇ VAMP FARM ┇")
+page9:Line()
+farmvamp = 10
+page9:Slider("Farm Distance", 0,20, 10,function(disttt)
+farmvamp = disttt
+end)
+page9:Toggle("Vamp Farm (Use Skill 5 To Active)", false, function(cutvcll)
+getgenv().t = cutvcll
+while getgenv().t do wait()
+pcall(function()
+ for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+            if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") 
+              or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
+             or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Boar")
+              and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+repeat wait()
+pcall(function()
+if getgenv().t == true and v.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmvamp,0,0)
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "VampirePower5",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-391.38922119140625, 213, -232.140625, 0.5274614095687866, -0.7214826345443726, 0.4486061632633209, -1.4901161193847656e-08, 0.5280334949493408, 0.8492236733436584, -0.8495790362358093, -0.44793272018432617, 0.2785172760486603),
+    [5] = workspace:WaitForChild("IslandWindmill"):WaitForChild("Beach"):WaitForChild("Beach"),
+    [9] = "Left"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Vampire.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "VampirePower5",
+    [3] = "StopCharging",
+    [4] = v.HumanoidRootPart.CFrame,
+    [5] = workspace:WaitForChild("IslandWindmill"):WaitForChild("OutterDune"):WaitForChild("Beach"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Vampire.RemoteEvent:FireServer(unpack(args))
+
+end
+end)
+until v.Humanoid.Health <= 0 or not getgenv().t
 end
 end
 end)
