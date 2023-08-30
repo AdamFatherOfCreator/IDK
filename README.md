@@ -36,6 +36,8 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4059421765, -- accquaydffirstsea35
+4058001938, -- accquaydffirstsea34
 4056862638, -- accquaydffirstsea33
 4056585434, -- accquaydffirstsea32
 4056142639, -- accquaydffirstsea31
@@ -2496,7 +2498,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E5)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E6)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3173,6 +3175,56 @@ game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireSer
 wait(0.1)
 end)
 end
+end)
+page9:Line()
+page9:Label("┇ PLASMA FARM ┇")
+page9:Line()
+page9:Toggle("Plasma Farm", false, function(concak)
+getgenv().autofarmplas = concak
+while getgenv().autofarmplas do wait()
+pcall(function()
+                local pla = game.Players.LocalPlayer;
+                local Mouse = pla:GetMouse();
+                    local args = {
+                        [1] = tonumber(serializeTable(remotes)),
+                        [2] = "PlasmaPower4",
+                        [3] = "StartCharging",
+                        [4] = Vector3.new(Mouse.Hit.X, Mouse.Hit.Y, Mouse.Hit.Z)
+                    }
+                    game:GetService("Players").LocalPlayer.Character.Powers.Plasma.RemoteEvent:FireServer(unpack(args))
+                    wait(0)
+                    local args = {
+                        [1] = tonumber(serializeTable(remotes)),
+                        [2] = "PlasmaPower4",
+                        [3] = "Attack",
+                        [4] = Vector3.new(Mouse.Hit.X, Mouse.Hit.Y, Mouse.Hit.Z),
+                        [5] = Mouse.Hit,
+                        [6] = 100
+                    }
+                    game:GetService("Players").LocalPlayer.Character.Powers.Plasma.RemoteEvent:FireServer(unpack(args))
+
+                    local args = {
+                        [1] = tonumber(serializeTable(remotes)),
+                        [2] = "PlasmaPower4",
+                        [3] = "Attack",
+                        [4] = Vector3.new(Mouse.Hit.X, Mouse.Hit.Y, Mouse.Hit.Z),
+                        [5] = Mouse.Hit,
+                        [6] = 100
+                    }
+                    game:GetService("Players").LocalPlayer.Character.Powers.Plasma.RemoteEvent:FireServer(unpack(args))
+
+                    local args = {
+                        [1] = tonumber(serializeTable(remotes)),
+                        [2] = "PlasmaPower4",
+                        [3] = "Attack",
+                        [4] = Vector3.new(Mouse.Hit.X, Mouse.Hit.Y, Mouse.Hit.Z),
+                        [5] = Mouse.Hit,
+                        [6] = 100
+                    }
+                    game:GetService("Players").LocalPlayer.Character.Powers.Plasma.RemoteEvent:FireServer(unpack(args))
+            
+        end)
+    end
 end)
 page9:Line()
 page9:Label("┇ CANNON FARM ┇")
