@@ -36,6 +36,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4056142639, -- accquaydffirstsea31
 4740726618, -- chemhan764239
 4055494125, -- accquaydffirstsea30
 4945123695, -- 1_xSxBuildTheSun
@@ -2990,6 +2991,39 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(unpack(args))
+wait(0.1)
+end)
+end
+end)
+page9:Line()
+page9:Label("┇ GAS FARM ┇")
+page9:Line()
+page9:Toggle("Gas Farm", false, function(vcmmttb)
+ getgenv().autofarmgas = vcmmttb
+while getgenv().autofarmgas do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "GasPower4",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-1689.326904296875, 213, 9976.861328125, 0.9961590766906738, -0.06699453294277191, 0.056381046772003174, -0, 0.6438990831375122, 0.7651103138923645, -0.08756192773580551, -0.7621715664863586, 0.6414259076118469),
+    [5] = workspace:WaitForChild("IslandKai"):WaitForChild("Folder"):WaitForChild("FourIce"),
+    [7] = "Right"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Gas.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "GasPower4",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
+    [5] = workspace:WaitForChild("IslandKai"):WaitForChild("Folder"):WaitForChild("FourIce"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Gas.RemoteEvent:FireServer(unpack(args))
+
 wait(0.1)
 end)
 end
