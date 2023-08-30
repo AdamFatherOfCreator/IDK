@@ -3227,6 +3227,44 @@ pcall(function()
     end
 end)
 page9:Line()
+page9:Label("┇ SAND FARM ┇")
+page9:Line()
+farmsand = 10
+page9:Slider("Farm Distance", 0,20, 10,function(distt)
+farmsand = distt
+end)
+page9:Toggle("Sand Farm (Use Skill 3 To Active)", false, function(cutvcl)
+getgenv().e = cutvcl
+while getgenv().e do wait()
+pcall(function()
+ for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+            if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") 
+              or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
+             or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Boar")
+              and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+repeat wait()
+pcall(function()
+if getgenv().e == true and v.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmsand,0,0)
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "SandPower8",
+    [3] = "Create",
+    [4] = v.HumanoidRootPart.CFrame,
+    [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach")
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Sand.RemoteEvent:FireServer(unpack(args))
+
+end
+end)
+until v.Humanoid.Health <= 0 or not getgenv().e
+end
+end
+end)
+end
+end)
+page9:Line()
 page9:Label("┇ CANNON FARM ┇")
 page9:Line()
 page9:Toggle("Cannon Farm Mob", false, function(daxc)
