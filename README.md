@@ -2498,7 +2498,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E7)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E8)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -2707,7 +2707,7 @@ wait(0.1)
 game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(v,"QuakePower4", "StopCharging",workspace.IslandCaver.Stones.Stone,CFrame.new(Vector3.new(-1270.039794921875, 263.09088134765625, -1793.016357421875), Vector3.new(0.32165566086769104, -0.4306340515613556, -0.8432627320289612)),100,Vector3.new(-1270.039794921875, 263.09088134765625, -1793.016357421875), Vector3.new(0.32165566086769104, -0.4306340515613556, -0.8432627320289612))
 wait(0.1)
 local args = {
-    [1] = 939731.82,
+    [1] = v,
     [2] = "QuakePower4",
     [3] = "StopCharging",
     [4] = workspace:WaitForChild("IslandCaver"):WaitForChild("Stones"):WaitForChild("Stone"),
@@ -2743,7 +2743,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
 wait(0.1)
 local args = {
-    [1] = 939731.82,
+    [1] = v,
     [2] = "QuakePower4",
     [3] = "StopCharging",
     [4] = workspace:WaitForChild("IslandWindmill"):WaitForChild("Beach"):WaitForChild("Beach"),
@@ -6353,29 +6353,12 @@ end)
         Event:FireServer(A_1, A_2)
                             end
                         )
-    page5:Line()
-    page5:Label(" ┇ KILL ALL PLAYER ┇")
-    page5:Line()       
-    page5:Toggle("Quake Kill All",false, function(qare)
-    getgenv().vcm = qare
-        while getgenv().vcm do wait()
-    pcall(function()
-local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
-local vp = x.VTCebvc
-for i,v in pairs(game.Players:GetChildren()) do
-if v.Name ~= game.Players.LocalPlayer.Name then
-for i,c in pairs(game.Workspace:GetChildren()) do
-if c:IsA("Model") and c.Name == v.Name then
-game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(vp,"QuakePower4", "StopCharging",workspace.IslandCaver.Stones.Stone,c.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
-end
-end
-end
-end
-end)
-end
-end)
-
-
+page5:Line()
+    page5:Label(" ┇ 100% SKILL ┇")
+        page5:Line()
+        page5:Toggle("100% Skill", false, function(trueettreo)
+        _G.auto100rate = trueettreo
+        end)
 page5:Line()
     page5:Label(" ┇ ABOUT PLAYER ┇")
         page5:Line()
