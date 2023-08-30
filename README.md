@@ -36,6 +36,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4056862638, -- accquaydffirstsea33
 4056585434, -- accquaydffirstsea32
 4056142639, -- accquaydffirstsea31
 4740726618, -- chemhan764239
@@ -2495,7 +2496,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E4)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E5)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3057,6 +3058,117 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Powers.Flare.RemoteEvent:FireServer(unpack(args))
+
+wait(0.1)
+end)
+end
+end)
+page9:Line()
+page9:Label("┇ BOMB FARM ┇")
+page9:Line()
+page9:Toggle("Bomb Farm Skill 1", false, function(retrefff)
+ getgenv().autofarmbom = retrefff
+while getgenv().autofarmbom do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower1",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [7] = "Left"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower1",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+
+wait(0.1)
+end)
+end
+end)
+page9:Toggle("Bomb Farm Skill 2", false, function(retreffff)
+ getgenv().autofarmbom2 = retreffff
+while getgenv().autofarmbom2 do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower2",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+wait(0.1)
+end)
+end
+end)
+page9:Toggle("Bomb Farm Skill 4", false, function(retreftff)
+ getgenv().autofarmbom3 = retreftff
+while getgenv().autofarmbom3 do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower4",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [7] = "Left"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower4",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+
+wait(0.1)
+end)
+end
+end)
+page9:Toggle("Bomb Farm Skill 5", false, function(retreffft)
+ getgenv().autofarmbom4 = retreffft
+while getgenv().autofarmbom4 do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower5",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [7] = "Left"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "BombPower5",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
 
 wait(0.1)
 end)
