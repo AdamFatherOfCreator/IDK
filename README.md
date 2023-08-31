@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E10)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E11)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4753,7 +4753,7 @@ end
 end)
 
     page2:Line()
-        page2:Label("┇  EXPERTISE ┇ ")
+        page2:Label("┇  EXPERTISE AND FISH QUEST ┇ ")
             page2:Line()
          page2:Toggle("Auto Get Expertise",false,function(bool)
                 getgenv().autoexp = bool
@@ -4763,10 +4763,47 @@ workspace:WaitForChild("Merchants"):WaitForChild("ExpertiseMerchant"):WaitForChi
 end)
                 end
     end)
+            page2:Line()
+            page2:Toggle("Auto Get Fish Quest",false,function(bool11)
+getgenv().tre = bool11
+while getgenv().tre do wait()
+pcall(function()
+workspace:WaitForChild("Merchants"):WaitForChild("QuestFishMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer()
+wait(2)
+end)
+end
+end)
+            page2:Toggle("Auto Do Quest",false,function(bool00)
+getgenv().tret = bool00
+while getgenv().tret do wait()
+pcall(function()
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Character:FindFirstChild("Package") then
+                            game.Players.LocalPlayer.Backpack:FindFirstChild("Package").Parent = game.Players.LocalPlayer.Character
+                            elseif game.Players.LocalPlayer.Character:FindFirstChild("Package") then
+ for _,v in pairs(game.Workspace.Merchants:GetChildren()) do
+if string.find(v.Name, "Aff") or string.find(v.Name, "Drink") or string.find(v.Name, "Boat") or string.find(v.Name, "Emote") or string.find(v.Name, "Exp") or string.find(v.Name, "Fish") or string.find(v.Name, "Flail") or string.find(v.Name, "Krizma") or string.find(v.Name, "QuestFish") or string.find(v.Name, "QuestMe") or string.find(v.Name, "Sniper") or string.find(v.Name, "Sword") and v:FindFirstChild("HumanoidRootPart") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(1, 0, 0)
+wait(0.2)
+end
+game.Players.LocalPlayer.Character.Package:Activate()
+end
+end
+end)
+end
+end)
+
      page2:Line()
     page2:Label(" ┇ HAKI FARM ┇ ")
         page2:Line()
-    
+    page2:Toggle("Auto Get Haki (1000Level)", false, function(bool122)
+getgenv().haki = bool122
+while getgenv().haki do wait()
+pcall(function()
+workspace:WaitForChild("Merchants"):WaitForChild("QuestHakiMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer()
+wait(2)
+end)
+end
+end)
     page2:Toggle("Haki Drain", false, function(bool)
             getgenv().autohaki = bool
     function hakiauto()
@@ -6859,14 +6896,6 @@ page6:Line()
                 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
         end
     end)
-    page8:Line()
-    page8:Label("DISCORD SERVER")
-        page8:Line()
-           page8:Button("Copy Link", function()
-            Flux:Notification("Copied To Clipboard","OK")
-                setclipboard("https://discord.gg/nSF2sFEjkv")
-                toclipboard("https://discord.gg/nSF2sFEjkv")
-           end)
     page8:Line()
         page8:Label("SERVER")
             page8:Line()
