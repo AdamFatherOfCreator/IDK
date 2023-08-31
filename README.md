@@ -2655,7 +2655,7 @@ end)
     page9:Line()
         page9:Label("┇ QUAKE FARM ┇")
     page9:Line()
-    page9:Toggle("Quake Farm" , false, function(quakefarm)  --Quake
+    page9:Toggle("Quake Farm (Far Distance)" , false, function(quakefarm)  --Quake
 getgenv().quakefarm1 = quakefarm
         while getgenv().quakefarm1 do wait()
     pcall(function()
@@ -2943,6 +2943,51 @@ game:GetService("Workspace").LocalPlayer.CharacterTrait.Health = 0
             end
             end)
     page9:Line()
+        page9:Label("┇ QUAKE FARM TP METHOD ┇")
+    page9:Line()
+page9:Toggle("Quake Farm",false, function(tpfarmquake)
+getgenv().quakeeeeeee = tpfarmquake
+while getgenv().quakeeeeeee do wait()
+pcall(function()
+        if getgenv().quakeeeeeee then
+            local pla = game.Players.LocalPlayer;
+            local Mouse = pla:GetMouse();
+            function round(num, numDecimalPlaces)
+                local mult = 10 ^ (numDecimalPlaces or 0)
+                return math.floor(num * mult + 0.6) / mult
+            end
+
+            local humanoid = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+            Xx = humanoid.Position.x-- round(humanoid.Position.x, 0)
+            Yy = humanoid.Position.y--round(humanoid.Position.y, 0)
+            Zz = humanoid.Position.z--round(humanoid.Position.z, 0)
+local args = {
+                [1] = tonumber(serializeTable(remotes)),
+                [2] = "QuakePower3",
+                [3] = "StartCharging",
+                [5] = "Right"
+            }
+
+            game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
+   wait()
+            local args = {
+                [1] = tonumber(serializeTable(remotes)),
+                [2] = "QuakePower3",
+                [3] = "StopCharging",
+                [4] = Mouse.Target,
+                [5] = Mouse.Hit,
+                [6] = 100,
+                [7] = Vector3.new(Xx, Yy, Zz)
+            }
+
+            game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
+   wait(0.2)
+   end
+   end)
+   end
+   end)
+   page9:Line()
         page9:Label("┇ LIGHT FARM ┇")
     page9:Line()
 
