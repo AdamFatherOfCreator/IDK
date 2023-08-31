@@ -36,6 +36,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+2605103756, -- Royal_Domination
 4059421765, -- accquaydffirstsea35
 4058001938, -- accquaydffirstsea34
 4056862638, -- accquaydffirstsea33
@@ -2498,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E8)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E9)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -2945,7 +2946,7 @@ game:GetService("Workspace").LocalPlayer.CharacterTrait.Health = 0
         page9:Label("┇ LIGHT FARM ┇")
     page9:Line()
 
-page9:Toggle("Light Farm ",false, function(tpmodelight)
+page9:Toggle("Light Farm (Use SKill 2 or 3 To Active) ",false, function(tpmodelight)
 getgenv().lightttt = tpmodelight
         while getgenv().lightttt do wait()
     pcall(function()
@@ -2970,7 +2971,7 @@ end)
 page9:Line()
 page9:Label("┇ MAGMA FARM ┇")
 page9:Line()
-page9:Toggle("Magma Farm", false, function(vcmmttb)
+page9:Toggle("Magma Farm (Use Ball To Active)", false, function(vcmmttb)
  getgenv().autofarmmag = vcmmttb
 while getgenv().autofarmmag do wait()
 pcall(function()
@@ -3002,7 +3003,7 @@ end)
 page9:Line()
 page9:Label("┇ GAS FARM ┇")
 page9:Line()
-page9:Toggle("Gas Farm", false, function(vcmmttb)
+page9:Toggle("Gas Farm (Use Gas Bomb To Active)", false, function(vcmmttb)
  getgenv().autofarmgas = vcmmttb
 while getgenv().autofarmgas do wait()
 pcall(function()
@@ -3035,7 +3036,7 @@ end)
 page9:Line()
 page9:Label("┇ FLARE FARM ┇")
 page9:Line()
-page9:Toggle("Flare Farm", false, function(retref)
+page9:Toggle("Flare Farm (Use Ball To Active)", false, function(retref)
  getgenv().autofarmflare = retref
 while getgenv().autofarmflare do wait()
 pcall(function()
@@ -3179,7 +3180,7 @@ end)
 page9:Line()
 page9:Label("┇ PLASMA FARM ┇")
 page9:Line()
-page9:Toggle("Plasma Farm", false, function(concak)
+page9:Toggle("Plasma Farm (Use SKill 4 To Active)", false, function(concak)
 getgenv().autofarmplas = concak
 while getgenv().autofarmplas do wait()
 pcall(function()
@@ -3225,6 +3226,39 @@ pcall(function()
             
         end)
     end
+end)
+page9:Line()
+page9:Label("┇ CHILLY FARM ┇")
+page9:Line()
+page9:Toggle("Chilly Farm (Use Skill 5 To Active)", false, function(cuttvcl)
+getgenv().ch = cuttvcl
+while getgenv().ch do wait()
+pcall(function()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "ChillyPower5",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-1237.283203125, 214, -1227.6104736328125, -0.9886944890022278, 0.025141680613160133, -0.14782194793224335, 1.862645371275562e-09, 0.9858428239822388, 0.16767293214797974, 0.14994476735591888, 0.1657773107290268, -0.9746971726417542),
+    [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach"),
+    [7] = "Right"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "ChillyPower5",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
+
+wait(0.2)
+end)
+end
 end)
 page9:Line()
 page9:Label("┇ SAND FARM ┇")
