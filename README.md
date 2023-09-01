@@ -2461,7 +2461,7 @@ local remotes = {}
         local args = {...}
         local method = getnamecallmethod()
         if method == "FireServer" or method == "InvokeServer" then
-            if self.Name == "RemoteEvent" and args[3] == "StopCharging" then
+            if self.Name == "RemoteEvent" and args[3] == "StopCharging" or args[3] == "Create" then
                 remotes[self.Name] = args[1]
                 return azc(self,unpack(args))
             end
@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E12)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E13)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3274,7 +3274,7 @@ farmsand = 10
 page9:Slider("Farm Distance", 0,15, 10,function(distt)
 farmsand = distt
 end)
-page9:Toggle("Sand Farm (Use Skill 3 To Active)", false, function(cutvcl)
+page9:Toggle("Sand Farm (Use Skill 2 To Active)", false, function(cutvcl)
 getgenv().e = cutvcl
 while getgenv().e do wait()
 pcall(function()
