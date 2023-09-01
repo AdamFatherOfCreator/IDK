@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E17)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E18)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3385,9 +3385,6 @@ page9:Line()
 page9:Toggle("Cannon Farm Mob", false, function(daxc)
     _G.autocannonslow = daxc
 end)
-page9:Toggle("Cannon Farm (Fast)", false, function(daxc)
-    _G.autocannon = daxc
-end)
 page9:Toggle("Cannon Farm All Player", false, function(daxccc)
     _G.autocannonplr = daxccc
     end)
@@ -3416,7 +3413,7 @@ end)
 spawn(function()
     while task.wait(0) do
         pcall(function()
-            if _G.autocannon or _G.autocannonplr then
+            if _G.autocannon then
                 local toolname = "Cannon Ball"
                 local Plr = game:GetService("Players").LocalPlayer
                 wait(0.75)
@@ -3435,7 +3432,7 @@ end)
 spawn(function()
     while task.wait(0) do
         pcall(function()
-            if _G.autocannonslow then
+            if _G.autocannonslow or _G.autocannonplr then
                 local toolname = "Cannon Ball"
                 local Plr = game:GetService("Players").LocalPlayer
                 wait(0.5)
@@ -3498,8 +3495,7 @@ end)
 spawn(function()
     while task.wait(0) do
         pcall(function()
-            if _G.autocannon and game.Players.LocalPlayer.Backpack:FindFirstChild("Cannon Ball") 
-            or _G.autocannonplr and game.Players.LocalPlayer.Backpack:FindFirstChild("Cannon Ball") then
+            if _G.autocannon and game.Players.LocalPlayer.Backpack:FindFirstChild("Cannon Ball") then
                 task.wait(1)
                 for i=1,2 do
                     game:GetService("Players").LocalPlayer.Character.Weapons:FireServer()
@@ -3513,7 +3509,7 @@ end)
 spawn(function()
     while task.wait(15) do
         pcall(function()
-            if _G.autocannon or _G.autocannonplr then
+            if _G.autocannon then
                 task.wait(0.1)
                 if game.Players.LocalPlayer.Backpack:FindFirstChild("Cannon Ball") then
                     for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
