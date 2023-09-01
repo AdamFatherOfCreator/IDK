@@ -2554,44 +2554,6 @@ local remotes = {}
                 table.insert(Wapon, v.Name)
             end
         end
-        page1:Line()
-        page1:Label("┇ ANTI STUN ┇")
-                page1:Line()
-                            page1:Toggle("Anti Stun", false, function(bool)
-        getgenv().antistun = bool
-        while getgenv().antistun do wait()
-            pcall(function()
-local plr = game.Players.LocalPlayer.Character
-    repeat
-plr.BurnMagmaOverTime.Value = true
-plr.BurnOverTime.Value = true
-plr.CandyTouched.Value = true
-plr.Cheshire.Value = true
-plr.ChillyPunched.Value = true
-plr["DF_Disabled"].Value = false
-plr.GasPoison.Value = true
-plr.GasAirless.Value = true
-plr.GravityCrushed.Value = true
-plr.HeartStolen.Value = true
-plr.Hobbied.Value = true
-plr.HotBody.Value = true
-plr.HypnosisOnCooldown.Value = true
-plr.LoveStunned.Value = true
-plr.Mored.Value = true
-plr.Negative.Value = true
-plr.OpeSevered.Value = true
-plr.Returned.Value = true
-plr.RumbleStun.Value = true
-plr.SanguineVampiris.Value = true
-plr.SnowTouched.Value = true
-plr.Stringing.Value = true
-plr.VenomDoT.Value = true
-wait(0.06)
-    until plr.Humanoid.Health == 0
-
-end)
-end
-end)
     page9:Line()
         page9:Label("┇ WEAPON SPAM (YORU FOR DEF FARMING) ┇")
     page9:Line()
@@ -6494,11 +6456,56 @@ end)
                             end
                         )
 page5:Line()
-    page5:Label(" ┇ 100% SKILL ┇")
+    page5:Label(" ┇ MISC SKILL ┇ ")
         page5:Line()
         page5:Toggle("100% Skill", false, function(trueettreo)
         _G.auto100rate = trueettreo
         end)
+        page5:Toggle("Anti Stun", false, function(bool)
+        getgenv().antistun = bool
+        while getgenv().antistun do wait()
+            pcall(function()
+local plr = game.Players.LocalPlayer.Character
+    repeat
+plr.BurnMagmaOverTime.Value = true
+plr.BurnOverTime.Value = true
+plr.CandyTouched.Value = true
+plr.Cheshire.Value = true
+plr.ChillyPunched.Value = true
+plr["DF_Disabled"].Value = false
+plr.GasPoison.Value = true
+plr.GasAirless.Value = true
+plr.GravityCrushed.Value = true
+plr.HeartStolen.Value = true
+plr.Hobbied.Value = true
+plr.HotBody.Value = true
+plr.HypnosisOnCooldown.Value = true
+plr.LoveStunned.Value = true
+plr.Mored.Value = true
+plr.Negative.Value = true
+plr.OpeSevered.Value = true
+plr.Returned.Value = true
+plr.RumbleStun.Value = true
+plr.SanguineVampiris.Value = true
+plr.SnowTouched.Value = true
+plr.Stringing.Value = true
+plr.VenomDoT.Value = true
+wait(0.06)
+    until plr.Humanoid.Health == 0
+end)
+end
+end)
+page5:Toggle("Auto Buso",false,function(fghrtywer)
+getgenv().wmpmrewpg = fghrtywer
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+while getgenv().wmpmrewpg do wait()
+pcall(function()
+workspace:WaitForChild("UserData"):WaitForChild("User_"..plrid):WaitForChild("UpdateHaki"):FireServer()
+wait(3)
+end)
+end
+end)
 page5:Line()
     page5:Label(" ┇ ABOUT PLAYER ┇")
         page5:Line()
