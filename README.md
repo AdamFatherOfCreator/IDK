@@ -3286,7 +3286,7 @@ pcall(function()
 repeat wait()
 pcall(function()
 if getgenv().e == true and v.Humanoid.Health > 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmsand,10,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmsand,15,0)
 wait()
 local args = {
     [1] = tonumber(serializeTable(remotes)),
