@@ -6841,7 +6841,7 @@ while getgenv().ghteqweqwehjrrt do wait()
 pcall(function()
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
-llocal args = {
+local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower2",
     [3] = "StopCharging",
