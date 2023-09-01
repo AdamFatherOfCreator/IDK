@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E18)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E19)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6632,23 +6632,23 @@ page5:Line()
     page5:Line()
     
     page5:Toggle("Quake Camp" , false, function(state)
-if state then
-_G.AutoQuake = true
+_G.AutoQuake = state
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
 local vp = x.VTCebvc
 while _G.AutoQuake do
     wait()
+    repeat wait()
     pcall(function()
+    if _G.AutoQuake == true and game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health > 0 then
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
             game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(vp,"QuakePower4", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
         end
     end
-    end)
     end
-else
-    _G.AutoQuake = false
-end
+    end)
+    until game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health <= 0 or not _G.AutoQuake
+    end
 end)
 ----------
 page5:Toggle("Light Camp" ,false, function(campbylight)
