@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E19)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E20)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -2907,7 +2907,7 @@ game:GetService("Workspace").LocalPlayer.CharacterTrait.Health = 0
     page9:Line()
         page9:Label("┇ QUAKE FARM TP METHOD ┇")
     page9:Line()
-page9:Toggle("Quake Farm",false, function(tpfarmquake)
+page9:Toggle("Quake Farm (Use Skill To Active)",false, function(tpfarmquake)
 getgenv().quakeeeeeee = tpfarmquake
 while getgenv().quakeeeeeee do wait()
 pcall(function()
@@ -2944,7 +2944,7 @@ local args = {
             }
 
             game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
-   wait(0.2)
+   wait(0.5)
    end
    end)
    end
@@ -2986,7 +2986,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "MagmaPower1",
     [3] = "StartCharging",
-    [4] = CFrame.new(-123.28974914550781, 213, -871.10595703125, 0.9992225766181946, -0.009072019718587399, 0.038368139415979385, -0, 0.9731666445732117, 0.23010201752185822, -0.03942607715725899, -0.22992312908172607, 0.9724099040031433),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach"),
     [7] = "Right"
 }
@@ -2997,7 +2997,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "MagmaPower1",
     [3] = "StopCharging",
-    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach"),
     [6] = 100
 }
@@ -3018,7 +3018,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "GasPower4",
     [3] = "StartCharging",
-    [4] = CFrame.new(-1689.326904296875, 213, 9976.861328125, 0.9961590766906738, -0.06699453294277191, 0.056381046772003174, -0, 0.6438990831375122, 0.7651103138923645, -0.08756192773580551, -0.7621715664863586, 0.6414259076118469),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandKai"):WaitForChild("Folder"):WaitForChild("FourIce"),
     [7] = "Right"
 }
@@ -3051,7 +3051,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "FlarePower2",
     [3] = "StartCharging",
-    [4] = CFrame.new(-143.0747833251953, 218, -994.1463012695312, 0.9986038208007812, -0.013327144086360931, 0.051116567105054855, 9.313225746154785e-10, 0.9676525592803955, 0.2522869408130646, -0.05282533913850784, -0.2519347071647644, 0.966301441192627),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandTown"):WaitForChild("GrassUplift"):WaitForChild("Union"),
     [7] = "Left"
 }
@@ -3062,7 +3062,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "FlarePower2",
     [3] = "StopCharging",
-    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandTown"):WaitForChild("GrassUplift"):WaitForChild("Union"),
     [6] = 100
 }
@@ -3084,7 +3084,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower1",
     [3] = "StartCharging",
-    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [7] = "Left"
 }
@@ -3095,7 +3095,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower1",
     [3] = "StopCharging",
-    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [6] = 100
 }
@@ -3114,7 +3114,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower2",
     [3] = "StopCharging",
-    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [6] = 100
 }
@@ -3132,7 +3132,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower4",
     [3] = "StartCharging",
-    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [7] = "Left"
 }
@@ -3162,7 +3162,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower5",
     [3] = "StartCharging",
-    [4] = CFrame.new(-1039.5162353515625, 214, 1886.921875, 0.2717759311199188, 0.3374144434928894, -0.9012709856033325, -0, 0.9365211129188538, 0.35061126947402954, 0.9623605608940125, -0.09528770297765732, 0.254523903131485),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [7] = "Left"
 }
@@ -3173,7 +3173,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "BombPower5",
     [3] = "StopCharging",
-    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Grass"):WaitForChild("Grass"),
     [6] = 100
 }
@@ -3245,7 +3245,7 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "ChillyPower5",
     [3] = "StartCharging",
-    [4] = CFrame.new(-1237.283203125, 214, -1227.6104736328125, -0.9886944890022278, 0.025141680613160133, -0.14782194793224335, 1.862645371275562e-09, 0.9858428239822388, 0.16767293214797974, 0.14994476735591888, 0.1657773107290268, -0.9746971726417542),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach"),
     [7] = "Right"
 }
@@ -3256,14 +3256,14 @@ local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "ChillyPower5",
     [3] = "StopCharging",
-    [4] = CFrame.new(-137.18856811523438, 213, -911.4592895507812, 0.8151018023490906, -0.16392956674098969, 0.555640459060669, -0, 0.9591289162635803, 0.28296998143196106, -0.5793178677558899, -0.23064933717250824, 0.7817875742912292),
+    [4] = CFrame.new(-1084.59033, -9763.44336, 501.375885, -0, 0.995015204, 0.0997241139, 0.0880244896, -0.099337019, 0.991152883, 0.996118307, 0.00877816416, -0.08758571),
     [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach"),
     [6] = 100
 }
 
 game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
 
-wait(0.2)
+wait(0.5)
 end)
 end
 end)
@@ -3627,11 +3627,15 @@ end)
 page9:Line()
 page9:Label("┇ AUTO TELEPORT TO MOB ┇")
 page9:Line()
-farmdis = 5
-page9:Slider("Farm Distance", 0,20, 5,function(dis)
+farmdis = 0
+page9:Slider("Farm Distance", 0,20, 0,function(dis)
 farmdis = dis
 end)
-page9:Toggle("Teleport To Mob (Include Krizma Cave)",false,function(req)
+farmheight = 15
+page9:Slider("Farm Height", 0,20, 15,function(diss)
+farmheight = diss
+end)
+page9:Toggle("Teleport To Mob (FARM ALL)",false,function(req)
 getgenv().c = req
 while getgenv().c do wait()
 pcall(function()
@@ -3643,7 +3647,7 @@ pcall(function()
 repeat wait()
 pcall(function()
 if getgenv().c == true and v.Humanoid.Health > 0 then 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,farmheight,farmdis)
 end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().c
@@ -3652,7 +3656,7 @@ end
 end)
 end
 end)
-    page9:Toggle("Teleport To Mob (Except Krizma Cave)",false,function(mob)
+    page9:Toggle("Teleport To Mob (NO GUNNER)",false,function(mob)
 getgenv().a = mob
 while getgenv().a do wait()
 pcall(function()
@@ -3664,7 +3668,7 @@ pcall(function()
 repeat wait()
 pcall(function()
 if getgenv().a == true and v.Humanoid.Health > 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmdis,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,farmheight,farmdis)
 end
 end)
 until v.Humanoid.Health <= 0 or not getgenv().a
