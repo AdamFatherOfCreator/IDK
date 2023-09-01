@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E11)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E12)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3309,7 +3309,7 @@ page9:Line()
 page9:Label("┇ SAND FARM ┇")
 page9:Line()
 farmsand = 10
-page9:Slider("Farm Distance", 0,20, 10,function(distt)
+page9:Slider("Farm Distance", 0,15, 10,function(distt)
 farmsand = distt
 end)
 page9:Toggle("Sand Farm (Use Skill 3 To Active)", false, function(cutvcl)
@@ -3347,8 +3347,8 @@ end)
 page9:Line()
 page9:Label("┇ VAMP FARM ┇")
 page9:Line()
-farmvamp = 10
-page9:Slider("Farm Distance", 0,20, 10,function(disttt)
+farmvamp = 15
+page9:Slider("Farm Distance", 0,20, 15,function(disttt)
 farmvamp = disttt
 end)
 page9:Toggle("Vamp Farm (Use Skill 5 To Active)", false, function(cutvcll)
@@ -3363,7 +3363,7 @@ pcall(function()
 repeat wait()
 pcall(function()
 if getgenv().t == true and v.Humanoid.Health > 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(farmvamp,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,farmvamp,0)
 local args = {
     [1] = tonumber(serializeTable(remotes)),
     [2] = "VampirePower5",
