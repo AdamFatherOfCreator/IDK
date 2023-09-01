@@ -6706,7 +6706,27 @@ game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireSer
 end
 end
 end)
+-----------
+page5:Toggle("Sand Camp" ,false, function(campbysand)
+getgenv().campsand = campbysand
+ while getgenv().campsand do wait()
+pcall(function()
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+        if v.Name == Choose2 then
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "SandPower8",
+    [3] = "Create",
+    [4] = v.HumanoidRootPart.CFrame,
+    [5] = workspace:WaitForChild("IslandPirate"):WaitForChild("Base"):WaitForChild("Beach")
+}
 
+game:GetService("Players").LocalPlayer.Character.Powers.Sand.RemoteEvent:FireServer(unpack(args))
+        end
+        end
+end)
+ end
+end)
 
 
 page6:Line()
