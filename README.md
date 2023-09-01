@@ -3270,11 +3270,11 @@ end)
 page9:Line()
 page9:Label("┇ SAND FARM ┇")
 page9:Line()
-farmsand = 10
-page9:Slider("Farm Distance", 0,15, 10,function(distt)
+farmsand = 5
+page9:Slider("Farm Distance", 0,15, 5,function(distt)
 farmsand = distt
 end)
-page9:Toggle("Sand Farm (Use Skill 3 To Active)", false, function(cutvcl)
+page9:Toggle("Sand Farm (Use Skill 2 To Active)", false, function(cutvcl)
 getgenv().e = cutvcl
 while getgenv().e do wait()
 pcall(function()
