@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E24)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E25)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6657,7 +6657,7 @@ Choose2 = c.Name
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.HumanoidRootPart.CFrame * CFrame.new(0,distancetp,0)
 end
 end)
-until  c.Humanoid.Health <= 0 or not getgenv().emladepnhat or c.HumanoidRootPart.Position.Y > 211000
+until  c.Humanoid.Health <= 0 or not getgenv().emladepnhat or c.HumanoidRootPart.Position.Y > 211000 or c.Name ~= v.Name
 end
 end
 end
@@ -6922,6 +6922,40 @@ end)
  end
 end)
 --------
+         page5:Toggle("Vamp Camp (Skill 5)",false, function(bo12oylggqweg)
+            getgenv().ghteqweqwehjt = bo12oylggqweg
+while getgenv().ghteqweqwehjt do wait()
+pcall(function()
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+        if v.Name == Choose2 then
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "VampirePower5",
+    [3] = "StartCharging",
+    [4] = CFrame.new(-391.38922119140625, 213, -232.140625, 0.5274614095687866, -0.7214826345443726, 0.4486061632633209, -1.4901161193847656e-08, 0.5280334949493408, 0.8492236733436584, -0.8495790362358093, -0.44793272018432617, 0.2785172760486603),
+    [5] = workspace:WaitForChild("IslandWindmill"):WaitForChild("Beach"):WaitForChild("Beach"),
+    [9] = "Left"
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Vampire.RemoteEvent:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = tonumber(serializeTable(remotes)),
+    [2] = "VampirePower5",
+    [3] = "StopCharging",
+    [4] = v.HumanoidRootPart.CFrame,
+    [5] = workspace:WaitForChild("IslandWindmill"):WaitForChild("OutterDune"):WaitForChild("Beach"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Vampire.RemoteEvent:FireServer(unpack(args))
+wait()
+end
+ end
+end)
+ end
+end)
+----------
 page6:Line()
     page6:Label("┇ Spam Fruit Skill ┇")
     page6:Line()
