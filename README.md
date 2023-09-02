@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E21)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E22)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -5403,9 +5403,13 @@ end)
     
        end
     )
-    hakitarget = 20
-    page2:Slider("Haki Target %",  1, 100,20,function(gmm)
+    hakitarget = 25
+    page2:Slider("Haki Target %",  1, 100,25,function(gmm)
     hakitarget = gmm
+    end)
+        hakispeed = 5
+    page2:Slider("Haki Speed",  1, 20,5,function(gttmm)
+    hakispeed = gttmm
     end)
     page2:Toggle("Auto Farm Haki",false, function(vccl)
     getgenv().concuvm = vccl
@@ -5435,7 +5439,7 @@ if game.Workspace.UserData["User_"..plrid].HakiBar.Value > sss and getgenv().con
     end
     local ehh = game.Players.LocalPlayer.Name
     local Final = lol(ehh)
-for i = 1,3 do
+for i = 1,hakispeed do
     local args = {
         [1] = "Off",
         [2] = 1
