@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E26)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E27)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3360,7 +3360,7 @@ end)
 spawn(function() -- autofarm velocity
     while wait(0) do
         pcall(function()
-            if getgenv().e or getgenv().c or getgenv().a or getgenv().t or KillPlayer or getgenv().emladepnhat then
+            if getgenv().e or getgenv().c or getgenv().a or getgenv().t or getgenv().tpcampto or getgenv().emladepnhat then
                 if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                     local Noclip = Instance.new("BodyVelocity")
                     Noclip.Name = "BodyClip"
@@ -3369,7 +3369,7 @@ spawn(function() -- autofarm velocity
                     Noclip.Velocity = Vector3.new(0,0,0)
                 end
                 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
-            elseif  getgenv().e == false or getgenv().c == false or getgenv().a == false or getgenv().t == false or KillPlayer == false or getgenv().emladepnhat == false then
+            elseif  getgenv().e == false or getgenv().c == false or getgenv().a == false or getgenv().t == false or getgenv().tpcampto == false or getgenv().emladepnhat == false then
                 --if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
                 wait(1)
@@ -6541,8 +6541,18 @@ page5:Line()
         page5:Slider("Distance",  0, 50,15,function(bool)
             distance = bool
         end)
-        page5:Toggle("Teleport To Camp (Distance)",false,function(bool)
-            KillPlayer = bool
+        page5:Toggle("Teleport To Camp (Distance)",false,function(boolllllasz)
+            getgenv().tpcampto = boolllllasz
+while getgenv().tpcampto do
+                repeat wait()
+pcall(function()
+if getgenv().tpcampto == true and game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.CFrame * CFrame.new(0,distance,0)
+
+end
+end)
+until game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health <= 0 or not getgenv().tpcampto
+end
         end)
         page5:Toggle("Bring Player",false,function(bool)
             _G.BringPlayer = bool
@@ -6567,19 +6577,6 @@ page5:Line()
                 UpdatePlayerChams()
             end
         
-        end)
-            spawn(function()
-            while wait() do
-                if KillPlayer then
-                repeat wait()
-                pcall(function()
-if KillPlayer == true and game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health > 0 then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.CFrame * CFrame.new(0,distance,0)
-end
-end)
-                    until game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health <= 0 or not KillPlayer
-                end
-            end
         end)
         spawn(function()
             while wait() do
