@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E23)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E22)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3360,7 +3360,7 @@ end)
 spawn(function() -- autofarm velocity
     while wait(0) do
         pcall(function()
-            if getgenv().e or getgenv().c or getgenv().a or getgenv().t or KillPlayer then
+            if getgenv().e or getgenv().c or getgenv().a or getgenv().t or KillPlayer or getgenv().emladepnhat then
                 if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                     local Noclip = Instance.new("BodyVelocity")
                     Noclip.Name = "BodyClip"
@@ -3369,7 +3369,7 @@ spawn(function() -- autofarm velocity
                     Noclip.Velocity = Vector3.new(0,0,0)
                 end
                 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
-            elseif  getgenv().e == false or getgenv().c == false or getgenv().a == false or getgenv().t == false or KillPlayer == false then
+            elseif  getgenv().e == false or getgenv().c == false or getgenv().a == false or getgenv().t == false or KillPlayer == false or getgenv().emladepnhat == false then
                 --if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
                 wait(1)
@@ -6638,7 +6638,33 @@ end)
 page5:Line()
     page5:Label(" ┇ CAMP PLAYER ┇")
     page5:Line()
-    
+    distancetp = 15
+    page5:Slider("TP Distance",  0, 50,15,function(gooo)
+    distancetp = gooo
+    end)
+    page5:Toggle("Teleport To All Spawned Player", false, function(irendz)
+     getgenv().emladepnhat = irendz
+ while getgenv().emladepnhat do wait()
+pcall(function()
+ for i,v in pairs(game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer.Name then
+for i,c in pairs(game.Workspace:GetChildren()) do
+if c:IsA("Model") and c.Name == v.Name and c.Humanoid.Health > 0 and c.HumanoidRootPart.Position.Y < 211000 then
+repeat wait()
+pcall(function()
+if getgenv().emladepnhat == true and c.Humanoid.Health > 0 and c.HumanoidRootPart.Position.Y < 211000 then
+Choose2 = c.Name
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.HumanoidRootPart.CFrame * CFrame.new(0,distancetp,0)
+end
+end)
+until  c.Humanoid.Health <= 0 or not getgenv().emladepnhat or c.HumanoidRootPart.Position.Y > 211000
+end
+end
+end
+end
+end)
+end
+    end)
     page5:Toggle("Quake Camp" , false, function(state)
 _G.AutoQuake = state
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
