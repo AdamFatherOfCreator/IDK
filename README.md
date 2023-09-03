@@ -3559,11 +3559,11 @@ page9:Line()
 page9:Label("┇ AUTO TELEPORT TO MOB ┇")
 page9:Line()
 farmdis = 0
-page9:Slider("Farm Distance", 0,20, 0,function(dis)
+page9:Slider("Farm Distance", 0,50, 0,function(dis)
 farmdis = dis
 end)
 farmheight = 15
-page9:Slider("Farm Height", 0,20, 15,function(diss)
+page9:Slider("Farm Height", 0,150, 15,function(diss)
 farmheight = diss
 end)
 page9:Toggle("Teleport To Mob (FARM ALL)",false,function(req)
@@ -3609,7 +3609,7 @@ end)
 end
 end)
 page9:Line()
-page9:Toggle("FARM KILL AURA (Include Krizma Cave)",false,function(req)
+page9:Toggle("FARM KILL AURA (FARM ALL)",false,function(req)
 getgenv().c = req
 while getgenv().c do wait()
 pcall(function()
