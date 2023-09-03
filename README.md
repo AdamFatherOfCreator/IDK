@@ -2499,7 +2499,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("Iren Hub (E29)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("Iren Hub (E30)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3398,7 +3398,7 @@ page9:Toggle("Cannon Farm All Player", false, function(daxccc)
                     	v.Character.HumanoidRootPart.Color = Color3.fromRGB(255, 255, 255)
                         v.Character.HumanoidRootPart.CanCollide = false
                         v.Character.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
-                        v.Character.HumanoidRootPart.CFrame = CFrame.new(4795, 570, -7047)
+                        v.Character.HumanoidRootPart.CFrame = CFrame.new(4795, 670, -7047)
                         if v.Character.Humanoid.Health == 0 then
                             v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
                             v.Character.HumanoidRootPart.Transparency = 1
@@ -3455,7 +3455,7 @@ spawn(function()
                 repeat task.wait(0)
                     for i, v in pairs(game.workspace.ResourceHolder["Resources_" .. game.Players.LocalPlayer.UserId]:GetChildren()) do
                         if v.Name == "CannonBall" then
-                            v.CFrame = CFrame.new(4795, 570, -7047)
+                            v.CFrame = CFrame.new(4795, 670, -7047)
                             v.CanCollide = false
                             if not v:FindFirstChild("BodyClip") then
                                 local Noclip = Instance.new("BodyVelocity")
@@ -3500,7 +3500,7 @@ spawn(function() -- autofarm cannon
                         v.HumanoidRootPart.CanCollide = false
                     	v.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 570, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
@@ -3515,7 +3515,7 @@ spawn(function() -- autofarm cannon
                         --v.HumanoidRootPart.Color = Color3.fromRGB(255, 255, 255)
                         v.HumanoidRootPart.Transparency = 0.9
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 570, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
@@ -3539,7 +3539,7 @@ spawn(function() -- autofarm cannon
                         v.HumanoidRootPart.CanCollide = false
                     	v.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 570, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
