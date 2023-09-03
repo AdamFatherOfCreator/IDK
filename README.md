@@ -17,7 +17,8 @@ local Pedo = {
     5084487, -- Americanflag
     928623624, -- TrashPanda2361
     30049170, -- Farquanetta
-    474452017 -- Bige0n
+    474452017, -- Bige0n
+    634413900 -- ShenFamus
     }
 
 for _, v in pairs(game:GetService("Players"):GetPlayers()) do
