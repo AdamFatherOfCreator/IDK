@@ -6694,7 +6694,7 @@ page5:Line()
     page5:Label(" ┇ CAMP PLAYER ┇")
     page5:Line()
     distancetp = 15
-    page5:Slider("TP Distance",  0, 50,15,function(gooo)
+    page5:Slider("TP Distance",  0, 200,15,function(gooo)
     distancetp = gooo
     end)
     page5:Toggle("Teleport To All Spawned Player", false, function(irendz)
