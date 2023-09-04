@@ -150,7 +150,18 @@ if _G.WhiteListed then
     getgenv().firstfruit = game.Workspace.UserData["User_"..Final].Data["DevilFruit"].Value
     getgenv().secondfruit = game.Workspace.UserData["User_"..Final].Data["DevilFruit2"].Value
     
-
+   do  
+    local fishingplace =  game:GetService("Workspace"):FindFirstChild("fishingplace")  
+    if fishingplace then 
+    fishingplace:Destroy() 
+    end 
+    end
+    local fishingplace = Instance.new("Part",game.Workspace)
+    fishingplace.Name = "fishingplace"
+    fishingplace.Size = Vector3.new(2,1,2)
+    fishingplace.Position = Vector3.new(19784, 213,5000)
+    fishingplace.Anchored = true
+    
     do  
     local safezonedestroyspace =  game:GetService("Workspace"):FindFirstChild("SafeZoneOuterSpacePart")  
     if safezonedestroyspace then 
@@ -2505,7 +2516,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (E32)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (E33)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4681,7 +4692,7 @@ end
 end)
 
     page2:Line()
-        page2:Label("┇  EXPERTISE AND FISH QUEST ┇ ")
+        page2:Label("┇  EXPERTISE AND QUEST ┇ ")
             page2:Line()
          page2:Toggle("Auto Get Expertise",false,function(bool)
                 getgenv().autoexp = bool
@@ -4691,6 +4702,62 @@ workspace:WaitForChild("Merchants"):WaitForChild("ExpertiseMerchant"):WaitForChi
 end)
                 end
     end)
+
+page2:Toggle("Auto Claim Challenges",false,function(challenge)
+getgenv().claim = challenge
+while getgenv().claim do wait()
+local plrid = tostring(game.Players.LocalPlayer.UserId)
+local plr = tostring(game.Players.LocalPlayer)
+pcall(function()
+if game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.DailyFrame.ScrollingFrame["Challenge_1"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Daily1")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.DailyFrame.ScrollingFrame["Challenge_2"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Daily2")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.DailyFrame.ScrollingFrame["Challenge_3"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Daily3")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.DailyFrame.ScrollingFrame["Challenge_4"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Daily4")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.WeeklyFrame.ScrollingFrame["Challenge_1"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Weekly1")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.WeeklyFrame.ScrollingFrame["Challenge_2"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Weekly2")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.WeeklyFrame.ScrollingFrame["Challenge_3"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Weekly3")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.MonthlyFrame.ScrollingFrame["Challenge_1"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Monthly1")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.MonthlyFrame.ScrollingFrame["Challenge_2"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Monthly2")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_1"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge1")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_2"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge2")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_3"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge3")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_4"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge4")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_6"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge6")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_7"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge7")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_8"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge8")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_9"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge9")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_10"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge10")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_11"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge11")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_12"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge12")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_13"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge13")
+elseif game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_14"].Claim.AutoButtonColor == true then
+workspace.UserData["User_"..plrid].ChallengesRemote:FireServer("Claim","Challenge14")
+end
+end)
+end
+end)
+
             page2:Line()
             page2:Toggle("Auto Get Fish Quest",false,function(bool11)
 getgenv().tre = bool11
@@ -4701,7 +4768,7 @@ wait(2)
 end)
 end
 end)
-            page2:Toggle("Auto Do Quest",false,function(bool00)
+            page2:Toggle("Auto Do Fish Quest",false,function(bool00)
 getgenv().tret = bool00
 while getgenv().tret do wait()
 pcall(function()
@@ -4719,7 +4786,52 @@ end
 end)
 end
 end)
+     page2:Line()
+page2:Toggle("Auto Fishing", false,function(coqewprcauca)
+getgenv().fishing = coqewprcauca
+    while getgenv().fishing do wait()
+        pcall(function()
+if getgenv().fishing then
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["fishingplace"].CFrame * CFrame.new(0, 3, 0)
+wait(0.5)
+for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if string.find(v.Name, "Rod") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+end
+end
+end
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if string.find(v.Name, "Rod") then
+for _, x in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if string.find(x.Name, "Rod") then
+for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if v:FindFirstChild("Bobber") then
+if v.Bobber.Effect.Enabled == true then
+wait(0.6)
 
+local args = {
+[1] = Vector3.new(20837,-3017,-4390)
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild(x.Name).Click:FireServer(unpack(args))
+end
+elseif v.Name == "Cast" and not v:FindFirstChild("Bobber") then
+wait(0.6)
+local args = {
+[1] = Vector3.new(20837,-3017,-4390)
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild(x.Name).Click:FireServer(unpack(args))
+wait()
+workspace:WaitForChild("Merchants"):WaitForChild("FishMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer()
+end
+end
+end
+end
+end
+end
+end)
+end
+end)
      page2:Line()
     page2:Label(" ┇ HAKI FARM ┇ ")
         page2:Line()
