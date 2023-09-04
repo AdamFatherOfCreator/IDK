@@ -36,7 +36,6 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
-1329011010, -- hotfruit2510
 3993347755, -- conketlol5
 4669089478, -- nguuyenquanghuytu
 4872236019, -- nguyenquangdat012
