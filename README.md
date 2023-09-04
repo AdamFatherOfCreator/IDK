@@ -2516,7 +2516,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (E33)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (E34)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6590,7 +6590,7 @@ page5:Line()
             end
         end)
                             distance = 15
-        page5:Slider("Distance",  0, 50,15,function(bool)
+        page5:Slider("Distance",  0, 200,15,function(bool)
             distance = bool
         end)
         page5:Toggle("Teleport To Camp (Distance)",false,function(boolllllasz)
@@ -6603,7 +6603,7 @@ repeat wait()
 pcall(function()
 if getgenv().emladepnwwhat == true and c.Humanoid.Health > 0 then
 Choose2 = c.Name
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.HumanoidRootPart.CFrame * CFrame.new(0,distancetp,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.HumanoidRootPart.CFrame * CFrame.new(0,distance,0)
 end
 end)
 until  c.Humanoid.Health <= 0 or not getgenv().emladepnwwhat or c.Name ~= v.Name
