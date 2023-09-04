@@ -2505,7 +2505,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (E31)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (E32)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4272,16 +4272,14 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
          page2:Line()
             
     page2:Label("┇  AUTO FARM STATS ┇ ")
-    page2:Toggle("Auto Barrels",false, function(state)
-if state then
-     _G.AutoMixer = true
+    page2:Toggle("Auto Barrels",false, function(statetts)
+getgenv().farmstats = statetts
 local user = tostring(game.Players.LocalPlayer.Name)
-local StoredLocation = game.workspace[""..user].HumanoidRootPart.CFrame 
 
 spawn(function()
 local plrid = tostring(game.Players.LocalPlayer.UserId)
 local plr = tostring(game.Players.LocalPlayer)
-while _G.AutoMixer do
+while getgenv().farmstats do
 wait()
 pcall(function()
 repeat task.wait() until game.Players[""..plr].PlayerGui.Challenges.Frame.Frame.ChallengesFrame.ScrollingFrame["Challenge_13"].Claim.AutoButtonColor == true
@@ -4304,34 +4302,39 @@ end
 end
 end
 
-while _G.AutoMixer do
+while getgenv().farmstats do
 pcall(function()
 for i,v in pairs(game:GetService("Workspace").Barrels.Barrels:GetDescendants()) do
 if v.Name == "Barrel" then
+if getgenv().farmstats == true then
 game.workspace[""..user].HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0, 5, 0)
 amongus()
+end
 wait(0.1)
 end
 end
 for i,v in pairs(game:GetService("Workspace").Barrels:GetDescendants()) do
 if v.Name == "Crate" then
+if getgenv().farmstats == true then
 game.workspace[""..user].HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0, 5, 0)
 amongus()
+end
 wait(0.1)
 end
 end
+if getgenv().farmstats == true then
 game.workspace[""..user].HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 5, 0)
-end)
-wait(15)
 end
-else
-   _G.AutoMixer = false
+end)
+amongus()
+ workspace:WaitForChild("Merchants"):WaitForChild("FishMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer()
+wait(15)
 end
 end)
 page2:Toggle(
         "Auto Drink Mixer",false,function(bool)
         getgenv().autodrinkmixer = bool
-        while getgenv().autodrinkmixer do wait(3)
+        while getgenv().autodrinkmixer do wait(2)
             pcall(function()
                 for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                     if v:IsA("Tool") and string.find(v.Name, "Juice") or string.find(v.Name, "Milk") or string.find(v.Name, "Cider") or string.find(v.Name, "Lemonade") or string.find(v.Name, "Smoothie") or string.find(v.Name, "Golden") then
