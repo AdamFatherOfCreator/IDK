@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (E34)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (E35)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3426,19 +3426,18 @@ page9:Toggle("Cannon Farm All Player", false, function(daxccc)
     end
 end)
 spawn(function()
-    while task.wait(0) do
+    while task.wait() do
         pcall(function()
-            if _G.autocannonslow or _G.autocannonplr then
-                local toolname = "Cannon Ball"
-                local Plr = game:GetService("Players").LocalPlayer
-                wait(0.5)
-                if Plr.Backpack:FindFirstChild(toolname) and not Plr.Character:FindFirstChild(toolname) and not Plr.Character:FindFirstChildOfClass("Tool") then
-                    local tool = Plr.Backpack:FindFirstChild(toolname)
-                    Plr.Character.Humanoid:EquipTool(tool)
+local plr = game.Players.LocalPlayer
+if _G.autocannonslow or _G.autocannonplr then
+for i,v in pairs(plr.Backpack:GetChildren()) do
+if v.Name == "Cannon Ball" then
+v.Parent = plr.Character
                 end
             end
-        end)
-    end
+         end
+      end)
+   end
 end)
 
 
