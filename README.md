@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F8)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F9)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4815,7 +4815,7 @@ if game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Play
                             game.Players.LocalPlayer.Backpack:FindFirstChild("Package").Parent = game.Players.LocalPlayer.Character
                             elseif game.Players.LocalPlayer.Character:FindFirstChild("Package") then
  for _,v in pairs(game.Workspace.Merchants:GetChildren()) do
-if string.find(v.Name, "Aff") or string.find(v.Name, "Drink") or string.find(v.Name, "Boat") or string.find(v.Name, "Emote") or string.find(v.Name, "Exp") or string.find(v.Name, "Fish") or string.find(v.Name, "Flail") or string.find(v.Name, "Krizma") or string.find(v.Name, "QuestFish") or string.find(v.Name, "QuestMe") or string.find(v.Name, "Sniper") or string.find(v.Name, "Sword") and v:FindFirstChild("HumanoidRootPart") then
+if string.find(v.Name, "Aff") or string.find(v.Name, "Heavy") or string.find(v.Name, "Drink") or string.find(v.Name, "Boat") or string.find(v.Name, "Emote") or string.find(v.Name, "Exp") or string.find(v.Name, "Fish") or string.find(v.Name, "Flail") or string.find(v.Name, "Krizma") or string.find(v.Name, "QuestFish") or string.find(v.Name, "QuestMe") or string.find(v.Name, "Sniper") or string.find(v.Name, "Sword") and v:FindFirstChild("HumanoidRootPart") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(1, 0, 0)
 wait(0.2)
 end
