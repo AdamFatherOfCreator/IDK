@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F5)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F6)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6599,7 +6599,7 @@ if c:IsA("Model") and c.Name == v.Name then
 local args = {
     [1] = c.HumanoidRootPart.CFrame * CFrame.new(0,-25,0),
     [2] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach")
-}.
+}
 
 c.Dash:FireServer(unpack(args))
 end
@@ -6657,10 +6657,32 @@ end
 end)
 end
 end)
+page5:Toggle("Dash Choosen Player",false, function(mobbqweqbbqweqw)
+getgenv().bringmob0222qw4 = mobbqweqbbqweqw
+while getgenv().bringmob0222qw4 do wait()
+pcall(function()
+for i,v in pairs(game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer.Name then
+for i,c in pairs(game.Workspace:GetChildren()) do
+if c:IsA("Model") and c.Name == Choose2 then
+local args = {
+    [1] = c.HumanoidRootPart.CFrame * CFrame.new(0,-25,0),
+    [2] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach")
+}
+
+c.Dash:FireServer(unpack(args))
+end
+end
+end
+end
+wait()
+end)
+end
+end)
         page5:Toggle("Bring Player",false,function(bool)
             _G.BringPlayer = bool
         end)
-        page5:Toggle("Spectate Player",false,function(bool)
+        page5:Toggle("Spectate/View Player",false,function(bool)
             Sp = bool
             local plr1 = game.Players.LocalPlayer.Character.Humanoid
             local plr2 = game.Players:FindFirstChild(SelectedKillPlayer)
