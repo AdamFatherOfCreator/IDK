@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F9)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F10)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4821,6 +4821,8 @@ wait(0.2)
 end
 game.Players.LocalPlayer.Character.Package:Activate()
 end
+elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 5, 0)
 end
 end)
 end
@@ -4831,9 +4833,9 @@ getgenv().fishing = coqewprcauca
     while getgenv().fishing do wait()
         pcall(function()
 if getgenv().fishing then
-wait(0.5)
+wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["fishingplace"].CFrame * CFrame.new(0, 3, 0)
-wait(0.5)
+wait(0.1)
 for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 if string.find(v.Name, "Rod") then
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
@@ -4847,7 +4849,7 @@ if string.find(x.Name, "Rod") then
 for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 if v:FindFirstChild("Bobber") then
 if v.Bobber.Effect.Enabled == true then
-wait(0.6)
+wait(0.1)
 
 local args = {
 [1] = Vector3.new(20837,-3017,-4390)
