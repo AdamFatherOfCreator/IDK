@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F3)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F4)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3646,13 +3646,13 @@ pcall(function()
                or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
               or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Gunner") or string.find(v.Name, "Buster") or string.find(v.Name, "Boar")
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health ~= 0 then
-repeat wait(0.4)
+repeat wait(0.5)
 pcall(function()
 if getgenv().c == true then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(5,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(10,0,0)
 wait(0.1)
-v.Humanoid.Health = 0
-wait(0.1)
+v:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
+wait(0.3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end
 end)
@@ -3663,7 +3663,7 @@ end)
 end
 end)
 
-page9:Toggle("FARM KILL AURA (Except Krizma Cave)",false,function(mob)
+page9:Toggle("FARM KILL AURA (No Gunner)",false,function(mob)
 getgenv().a = mob
 while getgenv().a do wait()
 pcall(function()
@@ -3675,10 +3675,10 @@ pcall(function()
 repeat wait(0.5)
 pcall(function()
 if getgenv().a == true then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(5,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(10,0,0)
 wait(0.1)
-v.Humanoid.Health = 0
-wait(0.1)
+v:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
+wait(0.3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
 end
 end)
