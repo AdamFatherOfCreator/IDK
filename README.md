@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F7)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F8)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4246,11 +4246,27 @@ end)
                 end
             end
         end)
-        
+                    page2:Toggle("Auto Spawn",_G.AutoSpawn,function(spawn)
+            _G.wekqwe = spawn
+        end)
+            spawn(function()
+            while wait() do
+                if _G.wekqwe then
+                    pcall(function()
+                        if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
+                             wait(5)
+   for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Load.MouseButton1Click)) do
+                                    v.Function()
+                                end
+                        end
+                    end)
+                end
+            end
+            end)
     page2:Line()
     page2:Label("┇  ALT FARMING ┇ ")
         page2:Line()
-    page2:Toggle("Auto Spawn",_G.AutoSpawn,function(spawn)
+    page2:Toggle("Auto Spawn (FARM ALT)",_G.AutoSpawn,function(spawn)
             _G.AutoSpawn = spawn
         end)
             spawn(function()
@@ -4258,7 +4274,7 @@ end)
                 if _G.AutoSpawn then
                     pcall(function()
                         if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
-                            repeat wait(4)
+                            repeat wait(5)
                                 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Load.MouseButton1Click)) do
                                     v.Function()
                                 end
