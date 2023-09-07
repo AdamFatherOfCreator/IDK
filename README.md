@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4276,12 +4276,24 @@ end)
             end)
         end
     end)
-     page2:Toggle("Auto Die For Farming",false,function(fr)
+         page2:Toggle("Auto Die For Farming (tp method)",false,function(fr)
         getgenv().autodiee = fr
         while getgenv().autodiee do wait()
             pcall(function()
                         if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
-                            repeat wait(5)
+                            repeat wait(7)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                            until game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == false
+                        end
+                    end)
+            end
+            end)
+     page2:Toggle("Auto Die For Farming (no tp method)",false,function(fr)
+        getgenv().autodiee = fr
+        while getgenv().autodiee do wait()
+            pcall(function()
+                        if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
+                            repeat wait(6)
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
                             until game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == false
                         end
