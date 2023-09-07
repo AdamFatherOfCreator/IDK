@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F4)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F5)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6585,6 +6585,28 @@ while getgenv().wmpmrewpg do wait()
 pcall(function()
 workspace:WaitForChild("UserData"):WaitForChild("User_"..plrid):WaitForChild("UpdateHaki"):FireServer()
 wait(3)
+end)
+end
+end)
+page5:Toggle("Dash All Player",false, function(mobbqweqbb)
+getgenv().bringmob02224 = mobbqweqbb
+while getgenv().bringmob02224 do wait()
+pcall(function()
+for i,v in pairs(game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer.Name then
+for i,c in pairs(game.Workspace:GetChildren()) do
+if c:IsA("Model") and c.Name == v.Name then
+local args = {
+    [1] = c.HumanoidRootPart.CFrame * CFrame.new(0,-25,0),
+    [2] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach")
+}.
+
+c.Dash:FireServer(unpack(args))
+end
+end
+end
+end
+wait()
 end)
 end
 end)
