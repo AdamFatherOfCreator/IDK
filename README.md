@@ -2515,7 +2515,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (E35)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3439,7 +3439,20 @@ v.Parent = plr.Character
       end)
    end
 end)
-
+spawn(function()
+    while task.wait() do
+        pcall(function()
+local plr = game.Players.LocalPlayer
+if getgenv().fishing then
+for i,v in pairs(plr.Backpack:GetChildren()) do
+if string.find(v.Name, "Rod") then
+v.Parent = plr.Character
+                end
+            end
+         end
+      end)
+   end
+end)
 
 spawn(function()
     while task.wait(0) do
