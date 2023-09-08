@@ -4736,10 +4736,11 @@ end)
             page2:Line()
          page2:Toggle("Auto Get Expertise",false,function(bool)
                 getgenv().autoexp = bool
-                while getgenv().autoexp do wait(5)
+                while getgenv().autoexp do wait()
                     pcall(function()
 workspace:WaitForChild("Merchants"):WaitForChild("ExpertiseMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer()
 end)
+wait(5)
                 end
     end)
 
