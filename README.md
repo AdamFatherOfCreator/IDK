@@ -4823,7 +4823,7 @@ end
 game.Players.LocalPlayer.Character.Package:Activate()
 end
 elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 5, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 3, 0)
 end
 end)
 end
