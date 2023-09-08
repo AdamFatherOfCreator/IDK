@@ -2903,12 +2903,12 @@ game:GetService("Workspace").LocalPlayer.CharacterTrait.Health = 0
             end)
         end
     end)
-       page9:Toggle("Auto Spawn",_G.AutoSpawn,function(spawn)
-            _G.AutoSpawn = spawn
+       page9:Toggle("Auto Spawn",false,function(spawn)
+            _G.AutoSpawnn = spawn
         end)
             spawn(function()
             while wait() do
-                if _G.AutoSpawn then
+                if _G.AutoSpawnn then
                     pcall(function()
                         if game:GetService("Players").LocalPlayer.PlayerGui.Load.Frame.Visible == true then
                             repeat wait(3)
@@ -4247,7 +4247,7 @@ end)
                 end
             end
         end)
-                    page2:Toggle("Auto Spawn",_G.AutoSpawn,function(spawn)
+                    page2:Toggle("Auto Spawn",false,function(spawn)
             _G.wekqwe = spawn
         end)
             spawn(function()
@@ -4267,7 +4267,7 @@ end)
     page2:Line()
     page2:Label("┇  ALT FARMING ┇ ")
         page2:Line()
-    page2:Toggle("Auto Spawn (FARM ALT)",_G.AutoSpawn,function(spawn)
+    page2:Toggle("Auto Spawn (FARM ALT)",false,function(spawn)
             _G.AutoSpawn = spawn
         end)
             spawn(function()
