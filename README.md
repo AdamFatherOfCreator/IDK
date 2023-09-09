@@ -2516,7 +2516,7 @@ local remotes = {}
  
     return tmp
  end
-                local win = Flux:Window("SALUNA (F10)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F11)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4823,7 +4823,7 @@ wait(0.3)
 end
 game.Players.LocalPlayer.Character.Package:Activate()
 end
-elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") then
+elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Backpack:FindFirstChild("Compass") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 3, 0)
 end
 end)
