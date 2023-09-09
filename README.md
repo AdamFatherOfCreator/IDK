@@ -4843,7 +4843,7 @@ wait(0.3)
 end
 game.Players.LocalPlayer.Character.Package:Activate()
 end
-elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Backpack:FindFirstChild("Compass") then
+elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Character:FindFirstChild("Compass") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["SafeZoneOuterSpacePart"].CFrame * CFrame.new(0, 3, 0)
 end
 end)
