@@ -2516,6 +2516,26 @@ local remotes = {}
  
     return tmp
  end
+ local plr = game.Players.LocalPlayer.Character.Name
+game.StarterGui:SetCore("SendNotification", {
+            Title = "This Messenge Sent From Saluna With Love",
+            Text = "Welcome To My Script! " ..plr,
+            Duration = 4
+          })
+          wait(1.5)
+game.StarterGui:SetCore("SendNotification", {
+            Title = "This Messenge Sent From Saluna With Love",
+            Text = "THIS SCRIPT IS MADE BY IRENKISS.",
+            Duration = 4
+          })
+          wait(1.5)
+game.StarterGui:SetCore("SendNotification", {
+            Title = "This Messenge Sent From Saluna With Love",
+            Text = "DON'T ABUSE THIS SCRIPT TOO MUCH.",
+            Duration = 4
+          })
+          wait(1.5)
+ 
                 local win = Flux:Window("SALUNA (F11)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
@@ -5579,9 +5599,9 @@ end
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Merchants.QuestHakiMerchant.HumanoidRootPart.CFrame
         else
          game.StarterGui:SetCore("SendNotification", {
-            Title = "Dum Hub",
-            Text = "Rayleigh did not spawn.",
-            Duration = 4
+            Title = "This Messenge Sent From Saluna With Love",
+            Text = "Rayleigh haven't spawned yet.",
+            Duration = 3
           })
     
         end
