@@ -2545,7 +2545,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait(1.5)
  
-                local win = Flux:Window("SALUNA (F11)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F12)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6658,6 +6658,11 @@ end
 wait()
 end)
 end
+end)
+page5:Button("SAFE ZONE (OTHER TP = DIE)",function()
+game.Workspace.Island8.Table.Chair.Seat.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -2, 0)
+wait(0.3)
+game.Workspace.Island8.Table.Chair.Seat.CFrame = CFrame.new(0, -100000, 0)
 end)
 page5:Line()
     page5:Label(" ┇ ABOUT PLAYER ┇")
