@@ -36,6 +36,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1810666877, -- Rareboxzs1
 3468253464, -- bao10_1
 2860632931, -- XxPhongMagmaxX
 857977140, -- xccfdhdi
