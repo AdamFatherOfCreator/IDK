@@ -36,6 +36,14 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+3468253464, -- bao10_1
+2860632931, -- XxPhongMagmaxX
+857977140, -- xccfdhdi
+1792637340, -- Power_Gaming2k7
+3647697808, -- PeXuuZuTo
+1171387409, -- khangngauloi
+2635741505, -- BlackDragond123
+1943377434, -- Joker_XxTinhDarkxX
 3451151379, -- Nghiasen_legendary
 3993347755, -- conketlol5
 4669089478, -- nguuyenquanghuytu
