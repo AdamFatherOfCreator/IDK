@@ -36,6 +36,8 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+876377767, -- vgfakemoon3
+1450900444, -- cyiutr1
 1220151559, -- dokaizen
 1329011010, -- hotfruit2510
 1810666877, -- Rareboxzs1
@@ -4842,7 +4844,6 @@ end
 end)
             page2:Toggle("Auto Do Fish Quest",false,function(bool00)
 getgenv().tret = bool00
-game.Players.LocalPlayer.Character.Humanoid.Sit = true
 while getgenv().tret do wait()
 pcall(function()
 if game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Character:FindFirstChild("Package") then
