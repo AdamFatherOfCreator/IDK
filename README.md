@@ -36,6 +36,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1220151559, -- dokaizen
 1329011010, -- hotfruit2510
 1810666877, -- Rareboxzs1
 3468253464, -- bao10_1
