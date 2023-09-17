@@ -3451,7 +3451,7 @@ page9:Toggle("Cannon Farm All Player", false, function(daxccc)
                         v.Character.HumanoidRootPart.Transparency = 0.9
                     	v.Character.HumanoidRootPart.Color = Color3.fromRGB(255, 255, 255)
                         v.Character.HumanoidRootPart.CanCollide = false
-                        v.Character.HumanoidRootPart.Size = Vector3.new(10000, 10000, 10000)
+                        v.Character.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
                         v.Character.HumanoidRootPart.CFrame = CFrame.new(100, 3000, 800)
                         if v.Character.Humanoid.Health == 0 then
                             v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
