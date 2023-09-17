@@ -1,5 +1,9 @@
 local Pedo = {
     1135910299, -- Havelic
+    1619950875, -- Pixel_SkillzSPIN2
+    1581720092, -- Pixel_SkillzSPIN
+    1661505948, -- Pixel_SkillzBARRIER
+    679804290, -- Pixel_Skillz
     520944, -- Oblivic
     43247021, -- BowTiedPony
     2350183594, -- icydragonwingsis
@@ -2533,23 +2537,23 @@ local remotes = {}
 game.StarterGui:SetCore("SendNotification", {
             Title = "This Messenge Sent From Saluna With Love",
             Text = "Welcome To My Script! " ..plr,
-            Duration = 4
+            Duration = 15
           })
-          wait(1.5)
+          wait()
 game.StarterGui:SetCore("SendNotification", {
             Title = "This Messenge Sent From Saluna With Love",
             Text = "THIS SCRIPT IS MADE BY IRENKISS.",
-            Duration = 4
+            Duration = 15
           })
-          wait(1.5)
+          wait()
 game.StarterGui:SetCore("SendNotification", {
             Title = "This Messenge Sent From Saluna With Love",
             Text = "DON'T ABUSE THIS SCRIPT TOO MUCH.",
-            Duration = 4
+            Duration = 15
           })
-          wait(1.5)
+          wait()
  
-                local win = Flux:Window("SALUNA (F13)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (F14)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -3447,8 +3451,8 @@ page9:Toggle("Cannon Farm All Player", false, function(daxccc)
                         v.Character.HumanoidRootPart.Transparency = 0.9
                     	v.Character.HumanoidRootPart.Color = Color3.fromRGB(255, 255, 255)
                         v.Character.HumanoidRootPart.CanCollide = false
-                        v.Character.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
-                        v.Character.HumanoidRootPart.CFrame = CFrame.new(4795, 670, -7047)
+                        v.Character.HumanoidRootPart.Size = Vector3.new(10000, 10000, 10000)
+                        v.Character.HumanoidRootPart.CFrame = CFrame.new(100, 3000, 800)
                         if v.Character.Humanoid.Health == 0 then
                             v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
                             v.Character.HumanoidRootPart.Transparency = 1
@@ -3517,7 +3521,7 @@ spawn(function()
                 repeat task.wait(0)
                     for i, v in pairs(game.workspace.ResourceHolder["Resources_" .. game.Players.LocalPlayer.UserId]:GetChildren()) do
                         if v.Name == "CannonBall" then
-                            v.CFrame = CFrame.new(4795, 670, -7047)
+                            v.CFrame = CFrame.new(100, 3000, 800)
                             v.CanCollide = false
                             if not v:FindFirstChild("BodyClip") then
                                 local Noclip = Instance.new("BodyVelocity")
@@ -3562,7 +3566,7 @@ spawn(function() -- autofarm cannon
                         v.HumanoidRootPart.CanCollide = false
                     	v.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(100, 3000, 800)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
@@ -3577,7 +3581,7 @@ spawn(function() -- autofarm cannon
                         --v.HumanoidRootPart.Color = Color3.fromRGB(255, 255, 255)
                         v.HumanoidRootPart.Transparency = 0.9
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(100, 3000, 800)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
@@ -3601,7 +3605,7 @@ spawn(function() -- autofarm cannon
                         v.HumanoidRootPart.CanCollide = false
                     	v.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
                         v:FindFirstChild("HumanoidRootPart").Anchored = true
-                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(4795, 670, -7047)
+                        v:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(100, 3000, 800)
                         if v.Humanoid.Health == 0 then
                             v.HumanoidRootPart.Size = Vector3.new(0, 0, 0)
                             v:Destroy()
@@ -4416,15 +4420,14 @@ wait(15)
 end
 end)
 page2:Toggle(
-        "Auto Drink Mixer",false,function(bool)
-        getgenv().autodrinkmixer = bool
-        while getgenv().autodrinkmixer do wait(2)
+        "Auto Drink Mixer",false,function(poola)
+        getgenv().autodrinkmixer = poola
+        while getgenv().autodrinkmixer do wait(4)
             pcall(function()
                 for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                     if v:IsA("Tool") and string.find(v.Name, "Juice") or string.find(v.Name, "Milk") or string.find(v.Name, "Cider") or string.find(v.Name, "Lemonade") or string.find(v.Name, "Smoothie") or string.find(v.Name, "Golden") then
                                             game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-                                            game:GetService'VirtualUser':CaptureController()
-                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+v:Activate()
                                         end
                                     end
             end)
