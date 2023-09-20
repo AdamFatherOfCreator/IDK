@@ -6645,28 +6645,6 @@ wait(3)
 end)
 end
 end)
-page5:Toggle("Dash All Player",false, function(mobbqweqbb)
-getgenv().bringmob02224 = mobbqweqbb
-while getgenv().bringmob02224 do wait()
-pcall(function()
-for i,v in pairs(game.Players:GetChildren()) do
-if v.Name ~= game.Players.LocalPlayer.Name then
-for i,c in pairs(game.Workspace:GetChildren()) do
-if c:IsA("Model") and c.Name == v.Name then
-local args = {
-    [1] = c.HumanoidRootPart.CFrame * CFrame.new(0,-25,0),
-    [2] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach")
-}
-
-c.Dash:FireServer(unpack(args))
-end
-end
-end
-end
-wait()
-end)
-end
-end)
 page5:Line()
     page5:Label(" ┇ ABOUT PLAYER ┇")
         page5:Line()
@@ -6714,28 +6692,7 @@ end
 end)
 end
 end)
-page5:Toggle("Dash Choosen Player",false, function(mobbqweqbbqweqw)
-getgenv().bringmob0222qw4 = mobbqweqbbqweqw
-while getgenv().bringmob0222qw4 do wait()
-pcall(function()
-for i,v in pairs(game.Players:GetChildren()) do
-if v.Name ~= game.Players.LocalPlayer.Name then
-for i,c in pairs(game.Workspace:GetChildren()) do
-if c:IsA("Model") and c.Name == Choose2 then
-local args = {
-    [1] = c.HumanoidRootPart.CFrame * CFrame.new(0,-25,0),
-    [2] = workspace:WaitForChild("IslandTown"):WaitForChild("Beach"):WaitForChild("Beach")
-}
 
-c.Dash:FireServer(unpack(args))
-end
-end
-end
-end
-wait()
-end)
-end
-end)
         page5:Toggle("Bring Player",false,function(bool)
             _G.BringPlayer = bool
         end)
