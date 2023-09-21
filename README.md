@@ -4460,12 +4460,13 @@ v:Activate()
     end)
     page2:Toggle("Auto Collect Chest",false,function(bool)
             getgenv().autochest = bool
-            while getgenv().autochest do wait(10)
+            while getgenv().autochest do wait()
                 pcall(function()
     local apis = game.workspace:GetDescendants()
     for i, v in pairs(apis) do
     if v.Name == "Touch" and v.Parent.Name == "TreasureChestPart" then
     v.Parent.CFrame = game.workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+    wait(15)
     end
     end
     end)
