@@ -40,6 +40,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1570525640, -- XxNguyen_SamaxX
 314763640, -- letranminh5
 876377767, -- vgfakemoon3
 1450900444, -- cyiutr1
