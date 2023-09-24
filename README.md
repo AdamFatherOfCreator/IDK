@@ -4467,9 +4467,10 @@ v:Activate()
     for i, v in pairs(apis) do
     if v.Name == "Touch" and v.Parent.Name == "TreasureChestPart" then
     v.Parent.CFrame = game.workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+  
+    end
+    end
     wait(15)
-    end
-    end
     end)
     end
     end)
