@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -2616,18 +2616,20 @@ game.StarterGui:SetCore("SendNotification", {
     page9:Line()
         page9:Label("┇ WEAPON SPAM (YORU FOR DEF FARMING) ┇")
     page9:Line()
-        page9:Slider("Yoru Speed",0,1000,0,function(to)
+    Speeds = 50
+        page9:Slider("Yoru Speed",0,200,50,function(to)
             Speeds = to
             end)
-            page9:Toggle("Yoru Spam (Equip Tool Before Turn On)", false, function(yoru)
-            if yoru then
-    _G.Yoru = true
+            page9:Toggle("Yoru Spam", false, function(yoru)
+
+    _G.Yoru = yoru
+while _G.Yoru do
+wait()
     local Players = game:GetService("Players")
     local Plr = Players.LocalPlayer
     local Character = Plr.Character
     local Yoru = Character:FindFirstChild("Yoru")
     local Environment
-while _G.Yoru do
 wait()
 pcall(function()
 for i,v in pairs(getconnections(Yoru["RequestAnimation"].OnClientEvent)) do 
@@ -2640,24 +2642,22 @@ end
 end)
 wait()
 end
-else
-    _G.Yoru = false
-end
 end)
  page9:Line()
   page9:Line()
-  page9:Slider("Cestus Speed",0,1000,0,function(too)
+  Speedss = 50
+  page9:Slider("Cestus Speed",0,200,50,function(too)
             Speedss = too
             end)
-            page9:Toggle("Seastone Spam (Equip Tool Before Turn On)",false, function(seastone)
-if seastone then
-    _G.Cestus = true
+            page9:Toggle("Seastone Spam",false, function(seastone)
+    _G.Cestus = seastone
+while _G.Cestus do
+wait()
     local Players = game:GetService("Players")
     local Plr = Players.LocalPlayer
     local Character = Plr.Character
     local Cestus = Character:FindFirstChild("Seastone Cestus")
     local Environment
-while _G.Cestus do
 wait()
 pcall(function()
 for i,v in pairs(getconnections(Cestus["RequestAnimation"].OnClientEvent)) do 
@@ -2668,9 +2668,6 @@ for i = 1, Speedss do
 Cestus["RequestAnimation"]:FireServer(Environment.PlaceId)
 end
 end)
-end
-else
-    _G.Cestus = false
 end
 end)
     page9:Line()
