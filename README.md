@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G2)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G3)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6709,13 +6709,15 @@ end)
             _G.BringPlayer = bool
         end)
         page5:Toggle("Spectate/View Player",false,function(bool)
-            Sp = bool
+            _G.Sp = bool
+            while _G.Sp do wait()
             local plr1 = game.Players.LocalPlayer.Character.Humanoid
             local plr2 = game.Players:FindFirstChild(SelectedKillPlayer)
-            repeat wait(.1)
+            repeat wait()
                 game.Workspace.Camera.CameraSubject = plr2.Character.Humanoid
-            until Sp == false 
+            until _G.Sp == false or SelectedKillPlayer ~= plr2.Name
             game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+            end
         end)
 
         page5:Button("Teleport Player", function()
