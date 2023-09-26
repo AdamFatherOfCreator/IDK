@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G6)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G7)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6284,7 +6284,7 @@ end
 end)
 
 page4:Toggle("AUTO SPIN AFFINITIES FRUIT 2", false, function(spin2)
-getgenv().AutoRoll2 = spin1
+getgenv().AutoRoll2 = spin2
 while getgenv().AutoRoll2 do wait()
 pcall(function()
 local plrid = tostring(game.Players.LocalPlayer.UserId)
@@ -6360,7 +6360,7 @@ _G.meleesnipswordspin = true
 else
 _G.meleesnipswordspin = false
 end
-if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT1Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Defense.Value < affty then
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty then
 _G.defswordsnip = true
 else
 _G.defswordsnip = false
