@@ -6267,9 +6267,9 @@ end)
 end
 end)
 
-page4:Toggle("AUTO SPIN AFFINITIES FRUIT 2", false, function(spin1)
-getgenv().AutoRoll = spin1
-while getgenv().AutoRoll do wait()
+page4:Toggle("AUTO SPIN AFFINITIES FRUIT 2", false, function(spin2)
+getgenv().AutoRoll2 = spin1
+while getgenv().AutoRoll2 do wait()
 pcall(function()
 local plrid = tostring(game.Players.LocalPlayer.UserId)
 local plr = tostring(game.Players.LocalPlayer)
@@ -6355,7 +6355,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Ac
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Visible = true
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Text = "CHOOSE TARGET BEFORE SPIN"
 end
-if _G.allspin == true and getgenv().AutoRoll == true then
+if _G.allspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6367,7 +6367,7 @@ local args = {
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
 
-elseif _G.meleesnipswordspin == true and getgenv().AutoRoll == true then
+elseif _G.meleesnipswordspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6378,19 +6378,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.defmeleeswordspin == true and getgenv().AutoRoll == true then
-local args = {
-    [1] = "DFT2",
-    [2] = DEFAFF,
-    [3] = MELEEAFF,
-    [4] = SNIPAFF,
-    [5] = SWORDAFF,
-    [6] = "Cash"
-}
-
-workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-
-elseif _G.defmeleesnipspin == true and getgenv().AutoRoll == true then
+elseif _G.defmeleeswordspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6402,7 +6390,7 @@ local args = {
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
 
-elseif _G.swordsnipspin == true and getgenv().AutoRoll == true then
+elseif _G.defmeleesnipspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6413,7 +6401,8 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.meleeswordspin == true and getgenv().AutoRoll == true then
+
+elseif _G.swordsnipspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6424,7 +6413,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.meleesnipspin == true and getgenv().AutoRoll == true then
+elseif _G.meleeswordspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6435,7 +6424,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.defswordspin == true and getgenv().AutoRoll == true then
+elseif _G.meleesnipspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6446,7 +6435,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.defsnipspin == true and getgenv().AutoRoll == true then
+elseif _G.defswordspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6457,7 +6446,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.defmeleespin == true and getgenv().AutoRoll == true then
+elseif _G.defsnipspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6468,7 +6457,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.swordspin == true and getgenv().AutoRoll == true then
+elseif _G.defmeleespin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6479,7 +6468,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.sniperspin == true and getgenv().AutoRoll == true then
+elseif _G.swordspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6490,7 +6479,7 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.meleespin == true and getgenv().AutoRoll == true then
+elseif _G.sniperspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
@@ -6501,7 +6490,18 @@ local args = {
 }
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
-elseif _G.defspin == true and getgenv().AutoRoll == true then
+elseif _G.meleespin == true and getgenv().AutoRoll2 == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+elseif _G.defspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
