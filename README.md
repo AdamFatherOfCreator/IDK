@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G3)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G4)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6708,6 +6708,10 @@ end)
         page5:Toggle("Bring Player",false,function(bool)
             _G.BringPlayer = bool
         end)
+        bringdistanceplr = 4
+        page5:Slider("Bring Distance",-50,50,27,function(bringplrdis)
+        bringdistanceplr = bringplrdis
+        end)
         page5:Toggle("Spectate/View Player",false,function(bool)
             _G.Sp = bool
             while _G.Sp do wait()
@@ -6735,7 +6739,7 @@ end)
             while wait() do
                 if _G.BringPlayer then
                     pcall(function()
-                        game.Players:FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-3)
+                        game.Players:FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-bringdistanceplr)
                     end)
                 end
             end
