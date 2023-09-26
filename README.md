@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (F14)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G1)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -4858,7 +4858,8 @@ while getgenv().tret do wait()
 pcall(function()
 if game.Players.LocalPlayer.Backpack:FindFirstChild("Package") and not game.Players.LocalPlayer.Character:FindFirstChild("Package") then
                             game.Players.LocalPlayer.Backpack:FindFirstChild("Package").Parent = game.Players.LocalPlayer.Character
-                            elseif game.Players.LocalPlayer.Character:FindFirstChild("Package") then
+                            game.Players.LocalPlayer.Character.Humanoid.Sit = true
+                            elseif game.Players.LocalPlayer.Character:FindFirstChild("Package") and getgenv().tret == true then
  for _,v in pairs(game.Workspace.Merchants:GetChildren()) do
 if string.find(v.Name, "Aff") or string.find(v.Name, "Heavy") or string.find(v.Name, "Drink") or string.find(v.Name, "Boat") or string.find(v.Name, "Emote") or string.find(v.Name, "Exp") or string.find(v.Name, "Fish") or string.find(v.Name, "Flail") or string.find(v.Name, "Krizma") or string.find(v.Name, "QuestFish") or string.find(v.Name, "QuestMe") or string.find(v.Name, "Friend") or string.find(v.Name, "Sniper") or string.find(v.Name, "Sword") and v:FindFirstChild("HumanoidRootPart") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(1, 0, 0)
@@ -5967,6 +5968,7 @@ end
      page4:Line()
     page4:Label(" ┇ AFFINITIES ┇ ")
         page4:Line()
+        
 affpoint = 8
 affty = 1.8
 page4:Slider("Affinities Point", 1, 10, 8,function(treo)
@@ -6263,7 +6265,7 @@ local args = {
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
 end
-wait(9)
+wait(10)
 end)
 end
 end)
@@ -6514,8 +6516,15 @@ local args = {
 
 workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
 end
-wait(9)
+wait(10)
 end)
+end
+end)
+page4:Button("-► AFFINITIES GUI ◄-",function()
+for i,v in pairs(game:GetService("Workspace").Merchants.AffinityMerchant:GetDescendants()) do
+if v:IsA("ClickDetector") then
+fireclickdetector(v)
+end
 end
 end)
     page4:Line()
