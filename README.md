@@ -2558,7 +2558,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G5)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G6)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -6092,6 +6092,11 @@ _G.meleesnipswordspin = true
 else
 _G.meleesnipswordspin = false
 end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT1Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Defense.Value < affty then
+_G.defswordsnip = true
+else
+_G.defswordsnip = false
+end
 if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT1Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Defense.Value < affty then
 _G.allspin = true
 else
@@ -6103,8 +6108,19 @@ game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Ac
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Visible = true
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Text = "CHOOSE TARGET BEFORE SPIN"
 end
+if _G.defswordsnip == true and getgenv().AutoRoll == true then
+local args = {
+    [1] = "DFT1",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
 
-if _G.allspin == true and getgenv().AutoRoll == true then
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.allspin == true and getgenv().AutoRoll == true then
 local args = {
     [1] = "DFT1",
     [2] = DEFAFF,
@@ -6344,6 +6360,11 @@ _G.meleesnipswordspin = true
 else
 _G.meleesnipswordspin = false
 end
+if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == false and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT1Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT1Defense.Value < affty then
+_G.defswordsnip = true
+else
+_G.defswordsnip = false
+end
 if SWORDSTAR == true and DEFSTAR == true and MELEESTAR == true and SNIPERSTAR == true and workspace.UserData["User_"..plrid].Data.DFT2Sword.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Sniper.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Melee.Value < affty and workspace.UserData["User_"..plrid].Data.DFT2Defense.Value < affty then
 _G.allspin = true
 else
@@ -6355,7 +6376,19 @@ game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Ac
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Visible = true
 game:GetService("Players").LocalPlayer.PlayerGui.Announcement.Frame.TextLabel.Text = "CHOOSE TARGET BEFORE SPIN"
 end
-if _G.allspin == true and getgenv().AutoRoll2 == true then
+if _G.defswordsnip == true and getgenv().AutoRoll2 == true then
+local args = {
+    [1] = "DFT2",
+    [2] = DEFAFF,
+    [3] = MELEEAFF,
+    [4] = SNIPAFF,
+    [5] = SWORDAFF,
+    [6] = "Cash"
+}
+
+workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))
+
+elseif _G.allspin == true and getgenv().AutoRoll2 == true then
 local args = {
     [1] = "DFT2",
     [2] = DEFAFF,
