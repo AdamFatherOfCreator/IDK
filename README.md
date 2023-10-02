@@ -6856,16 +6856,16 @@ end
 end)
     page5:Toggle("Quake Camp" , false, function(state)
 _G.AutoQuake = state
-local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
-local vp = x.VTCebvc
 while _G.AutoQuake do
     wait()
+local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
+local vppt = x.VTCebvc
     repeat wait()
     pcall(function()
-    if _G.AutoQuake == true and game.Players:FindFirstChild(SelectedKillPlayer).Character.Humanoid.Health > 0 then
+    if _G.AutoQuake == true and game.Players:FindFirstChild(Choose2).Character.Humanoid.Health > 0 then
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
-            game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(vp,"QuakePower4", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
+            game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(vppt,"QuakePower4", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
         wait(0.1)
         end
     end
