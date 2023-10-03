@@ -1,3 +1,4 @@
+_G.kick = false
 local Pedo = {
     1135910299, -- Havelic
     1619950875, -- Pixel_SkillzSPIN2
@@ -144,6 +145,7 @@ _G.WhiteListed = true
             end
         end
 if _G.WhiteListed or _G.bypasschothgngukhoi then
+_G.kick = true
   if game.placeId == 8569358381 or game.placeId == 3237168 then
     local vu = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -7760,6 +7762,6 @@ end)
     end)
     end
     end
-if _G.WhiteListed == false and _G.bypasschothgngukhoi == false   then 
+if _G.WhiteListed == false and _G.kick == false then 
 game.Players.LocalPlayer:Kick("KICKED      SALUNA Notify: Go Buy Script")
 end
