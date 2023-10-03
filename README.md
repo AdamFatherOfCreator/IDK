@@ -183,7 +183,7 @@ if _G.WhiteListed then
     local fishingplace = Instance.new("Part",game.Workspace)
     fishingplace.Name = "fishingplace"
     fishingplace.Size = Vector3.new(2,1,2)
-    fishingplace.Position = Vector3.new(19784, 213,5000)
+    fishingplace.Position = Vector3.new(19784, 210,5000)
     fishingplace.Anchored = true
     
     do  
