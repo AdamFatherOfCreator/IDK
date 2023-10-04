@@ -2563,7 +2563,7 @@ game.StarterGui:SetCore("SendNotification", {
           })
           wait()
  
-                local win = Flux:Window("SALUNA (G9)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
+                local win = Flux:Window("SALUNA (G10)", "MADE BY IRENKISS", Color3.fromRGB(0,166,58), Enum.KeyCode.F2)
                 Flux:Notification("ANTI-STAFF AUTOMATICALLY TURNED ON PRESS F2 TO HIDE/SHOW GUI","OK")
         local page2 = win:Tab("FARMING", "http://www.roblox.com/asset/?id=9391995844")
         local page3 = win:Tab("ISLAND/TELEPORT", "http://www.roblox.com/asset/?id=9391995844")
@@ -2573,7 +2573,7 @@ game.StarterGui:SetCore("SendNotification", {
         local page7 = win:Tab("MOB BRING", "http://www.roblox.com/asset/?id=9391995844")
         local page6 = win:Tab("AUTO SKILL", "http://www.roblox.com/asset/?id=9391995844")
        local page1 = win:Tab("MISC", "http://www.roblox.com/asset/?id=9391995844")
-        local page8 = win:Tab("SERVER", "http://www.roblox.com/asset/?id=9391995844")
+        local page8 = win:Tab("SETTINGS", "http://www.roblox.com/asset/?id=9391995844")
         Weapon = {}
         function FindWeapon()
             for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
@@ -7405,6 +7405,24 @@ page6:Line()
                 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
         end
     end)
+    page8:Line()
+        page8:Label("MOBILE SUPPORT")
+            page8:Line()
+page8:Button("HIDE/OPEN GUI", function()
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"F2",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+wait(0.1)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"F2",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AdamFatherOfCreator/UI123/main/kavo"))()
+local Window = Library.CreateLib("", "BloodTheme", colors)
+local Tab = Window:NewTab("")
+local Section = Tab:NewSection("")
+Section:NewButton("GUI","", function()
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"F2",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+wait(0.1)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"F2",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+end)
+end)
     page8:Line()
         page8:Label("SERVER")
             page8:Line()
