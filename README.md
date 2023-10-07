@@ -41,6 +41,13 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+3777705947, -- Dragon_Xayad
+2370889865, -- bollken2
+1529597528, -- datag10
+3170802162, -- issknshsusu
+1411247414, -- TNAE_SsThanhKunnsS
+3286439888, --NhanBoy07
+3199047367, -- VTAZONE2008
 986848272, -- TAU115TAI
 304648368, -- produydn1
 4141021120, -- iwxoxz
