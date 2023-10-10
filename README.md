@@ -41,6 +41,7 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+4446507245, -- BaoTrumToxic
 314763640, -- letranminh5
 1290417002, -- ccqn004
 1408212935, -- Kirito_vnc
