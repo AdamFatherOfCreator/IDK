@@ -41,6 +41,9 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+314763640, -- letranminh5
+1290417002, -- ccqn004
+1408212935, -- Kirito_vnc
 3777705947, -- Dragon_Xayad
 2370889865, -- bollken2
 1529597528, -- datag10
