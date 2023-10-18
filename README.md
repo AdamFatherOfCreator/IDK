@@ -3360,8 +3360,8 @@ while getgenv().e do wait()
 pcall(function()
  for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
             if string.find(v.Name, "Crab") or string.find(v.Name, "Bandit") or string.find(v.Name, "Thief") 
-              or string.find(v.Name, " Vokun") or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
-             or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Buster") or string.find(v.Name, "Bucky") or string.find(v.Name, "Bruno") or string.find(v.Name, "Boar")
+               or string.find(v.Name, "Fred") or string.find(v.Name, "Frey") or string.find(v.Name, "Fri") or string.find(v.Name, "Fru") or string.find(v.Name, "Angry") 
+             or string.find(v.Name, "Cave ") or string.find(v.Name, "Thug") or string.find(v.Name, "Gunslinger") or string.find(v.Name, "Boar")
               and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
 repeat wait()
 pcall(function()
