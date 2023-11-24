@@ -41,6 +41,12 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1811121760, -- ChanhProGamer
+5027369692, -- QuaLeKhongLo
+1141261219, -- bemancau
+679206047, -- haodepzai123456
+1708655181, -- Cooki_Hieu
+818126717, -- chanhcho200912
 4960088701, -- PenikTrugDaiMu
 463465033, -- vuichtuan09
 4475140933, -- lekiet07989
