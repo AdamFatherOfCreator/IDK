@@ -41,6 +41,9 @@ game:GetService("Players").PlayerAdded:Connect(function(r)
     end
 end)  
 local listed = {
+1566703867, -- Ekko_gaming10
+3913846312, -- anhlapro1aa
+2451054123, -- hoan123444421
 1811121760, -- ChanhProGamer
 5027369692, -- QuaLeKhongLo
 1141261219, -- bemancau
